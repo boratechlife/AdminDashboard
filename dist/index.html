@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="tailwind.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <script src="//unpkg.com/alpinejs" defer></script>
   </head>
   <body class="overflow-x-hidden bg-gray-100" x-data="{ SideBarOpen: false }">
-    <header class="fixed top-0 z-50 w-full py-3 bg-dark">
+    <header class="fixed top-0 z-50 w-full bg-dark">
       <div class="container mx-auto">
         <div class="flex items-center justify-between w-full">
           <div class="flex items-center space-x-4 text-white">
@@ -40,152 +43,53 @@
             </div>
             <nav class="px-6">
               <ul class="flex space-x-3">
-                <li class="flex items-center px-2 space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke=""
-                    class="w-5 h-5 stroke-current"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    ></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                  </svg>
-                  <span>List1</span>
+                <li
+                  class="flex items-center px-4 py-3 space-x-2 cursor-pointer  hover:border-t-2 hover:border-white"
+                >
+                  <i class="fa fa-film"></i>
+                  <span class="hidden lg:inline">Movies</span>
                 </li>
-                <li class="flex items-center px-2 space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke=""
-                    class="w-5 h-5 stroke-current"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    ></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                  </svg>
-                  <span>List1</span>
+                <li
+                  class="flex items-center px-4 py-3 space-x-2 cursor-pointer  hover:border-t-2 hover:border-white"
+                >
+                  <i class="fa fa-music"></i>
+                  <span class="hidden lg:inline">Audio</span>
                 </li>
-                <li class="flex items-center px-2 space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke=""
-                    class="w-5 h-5 stroke-current"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    ></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                  </svg>
-                  <span>List1</span>
+
+                <li
+                  class="flex items-center px-4 py-3 space-x-2 cursor-pointer  hover:border-t-2 hover:border-white"
+                >
+                  <i class="fa fa-desktop"></i>
+                  <span class="hidden lg:inline">TV</span>
                 </li>
-                <li class="flex items-center px-2 space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke=""
-                    class="w-5 h-5 stroke-current"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    ></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                  </svg>
-                  <span>List1</span>
+                <li
+                  class="flex items-center px-4 py-3 space-x-2 cursor-pointer  hover:border-t-2 hover:border-white"
+                >
+                  <i class="fa fa-ban"></i>
+                  <span class="hidden lg:inline">Adult</span>
                 </li>
-                <li class="flex items-center px-2 space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke=""
-                    class="w-5 h-5 stroke-current"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    ></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                  </svg>
-                  <span>List1</span>
+
+                <li
+                  class="flex items-center px-4 py-3 space-x-2 cursor-pointer  hover:border-t-2 hover:border-white"
+                >
+                  <i class="fa fa-book"></i>
+                  <span class="hidden lg:inline">Books</span>
                 </li>
-                <li class="flex items-center px-2 space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke=""
-                    class="w-5 h-5 stroke-current"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    ></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                  </svg>
-                  <span>List1</span>
+
+                <li
+                  class="flex items-center px-4 py-3 space-x-2 cursor-pointer  hover:border-t-2 hover:border-white"
+                >
+                  <i class="fa fa-bolt"></i>
+                  <span class="hidden lg:inline">Misc</span>
                 </li>
               </ul>
             </nav>
           </div>
           <div
-            class="
-              relative
-              flex
-              items-center
-              px-2
-              space-x-2
-              userprofile
-              dropdown
-            "
+            class="relative flex items-center px-2 space-x-2  userprofile dropdown"
           >
             <div
-              class="
-                absolute
-                z-40
-                w-64
-                h-64
-                bg-white
-                -left-20
-                top-10
-                dropdown-content
-                drop-shadow-sm
-              "
+              class="absolute z-40 w-64 h-64 bg-white  -left-20 top-10 dropdown-content drop-shadow-sm"
             ></div>
             <div class="w-10 h-10 bg-gray-200 rounded-full"></div>
             <p class="text-white">Hi, DENIS</p>
@@ -196,19 +100,7 @@
 
     <div
       x-bind:class="SideBarOpen ? 'w-64 block' : 'w-0 '"
-      class="
-        fixed
-        left-0
-        top-auto
-        z-50
-        h-screen
-        -mt-5
-        overflow-y-scroll
-        transition-all
-        duration-300
-        bg-white
-        sidebar
-      "
+      class="fixed left-0 top-auto z-50 h-screen -mt-5 overflow-y-scroll transition-all duration-300 bg-white  sidebar"
     >
       <div x-show="SideBarOpen" class="py-3 content">
         <!-- SEARCH -->
@@ -243,16 +135,7 @@
         <div class="flex px-3 my-2 space-x-2">
           <select
             id="-select"
-            class="
-              w-full
-              px-3
-              py-2
-              leading-9
-              border border-gray-100
-              shadow-sm
-              outline-none
-              caret-black
-            "
+            class="w-full px-3 py-2 leading-9 border border-gray-100 shadow-sm outline-none  caret-black"
           >
             <option class="leading-9">All</option>
 
@@ -283,18 +166,7 @@
           <div class="flex flex-col">
             <h4 class="mb-3 text-xl font-bold text-gray-600">Bento Admin</h4>
             <div
-              class="
-                flex
-                items-center
-                w-11/12
-                px-4
-                py-1
-                space-x-2
-                text-sm
-                border border-gray-100
-                badge
-                rounded-2xl
-              "
+              class="flex items-center w-11/12 px-4 py-1 space-x-2 text-sm border border-gray-100  badge rounded-2xl"
             >
               <div class="inline text-green-500 rounded-full">
                 <svg
@@ -324,302 +196,95 @@
             </h4>
             <ul class="divide-y">
               <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
+                <i class="text-lg fa fa-home"></i>
+
                 <p>Home</p>
               </li>
               <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+                <i class="fa fa-search"></i>
+
+                <p>Advanced Search</p>
               </li>
 
               <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+                <i class="fa fa-fire"></i>
+
+                <p>Popular Downloads</p>
+              </li>
+              <li class="flex items-center py-1 space-x-2 leading-10">
+                <i class="fa fa-gift"></i>
+
+                <p>Premium Service</p>
               </li>
 
               <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+                <i class="fa fa-globe"></i>
+
+                <p>Spotweb</p>
+              </li>
+              <li class="flex items-center py-1 space-x-2 leading-10">
+                <i class="fa fa-server"></i>
+
+                <p>Anonymous VPN</p>
               </li>
 
               <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+                <i class="fa fa-list"></i>
+
+                <p>Browse Groups</p>
+              </li>
+              <li class="flex items-center py-1 space-x-2 leading-10">
+                <i class="fa fa-shopping-cart"></i>
+
+                <p>Cart</p>
               </li>
 
               <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+                <i class="fa fa-envelope"></i>
+
+                <p>Contact</p>
               </li>
 
               <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+                <i class="fa fa-flag"></i>
+
+                <p>Reports</p>
+              </li>
+
+              <li class="flex items-center py-1 space-x-2 leading-10">
+                <i class="fa fa-cogs"></i>
+
+                <p>Admin</p>
               </li>
             </ul>
           </div>
 
-          <div class="mt-6 text-sm nav">
+          <div class="mt-6 mb-16 text-sm nav">
             <h4 class="mb-2 text-base font-normal text-gray-600 uppercase">
               Article and Link
             </h4>
             <ul class="divide-y">
               <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+                <i class="fa fa-cloud"></i>
+
+                <p>API</p>
               </li>
               <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+                <i class="fa fa-rss"></i>
+
+                <p>RSS Feeds</p>
               </li>
 
               <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+                <i class="fa fa-cog" aria-hidden="true"></i>
+
+                <p>Software Configuration</p>
               </li>
 
               <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
-              </li>
+                <i class="fa fa-question-circle"></i>
 
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
-              </li>
-
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
-              </li>
-
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+                <p>FAQ</p>
               </li>
             </ul>
           </div>
@@ -642,19 +307,9 @@
       <section class="mt-6">
         <div class="container mx-auto">
           <div class="grid grid-cols-1 gap-10 lg:grid-cols-4">
-            <div class="bg-white shadow-sm">
+            <div class="bg-white shadow-sm drop-shadow">
               <div
-                class="
-                  flex flex-col
-                  items-center
-                  justify-center
-                  p-4
-                  py-10
-                  text-white
-                  bg-black
-                  rounded-lg
-                  top
-                "
+                class="flex flex-col items-center justify-center p-4 py-10 text-white bg-black rounded-lg  top"
               >
                 <h4 class="mb-5 text-4xl font-light leading-none">FREE</h4>
 
@@ -667,110 +322,51 @@
               <div class="bg-white middle">
                 <ul>
                   <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
                   >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class="text-lg font-normal text-gray-500">
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="fa fa-rocket"></i>
+                      <span class="text-base font-normal text-gray-500">
                         25 API hits
                       </span>
                     </div>
                   </li>
                   <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
                   >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="plan-icon fa fa-download"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        Downloads
                       </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
+                    </div>
+                  </li>
+
+                  <li
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
+                  >
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="plan-icon fa fa-exclamation-triangle"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        No Spotweb
                       </span>
                     </div>
                   </li>
                   <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
                   >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
-                      </span>
-                    </div>
-                  </li>
-                  <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
-                  >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="plan-icon fa fa-exclamation-triangle"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        No XXX
                       </span>
                     </div>
                   </li>
@@ -786,24 +382,14 @@
               </div>
             </div>
 
-            <div class="bg-white shadow-sm">
+            <div class="bg-white shadow-sm drop-shadow">
               <div
-                class="
-                  flex flex-col
-                  items-center
-                  justify-center
-                  p-4
-                  py-10
-                  text-white
-                  bg-black
-                  rounded-lg
-                  top
-                "
+                class="flex flex-col items-center justify-center p-4 py-10 text-white bg-black rounded-lg  top"
               >
-                <h4 class="mb-5 text-4xl font-light leading-none">FREE</h4>
+                <h4 class="mb-5 text-4xl font-light leading-none">BASIC</h4>
 
                 <h3 class="font-bold">
-                  <span class="text-4xl">0</span>
+                  <span class="text-4xl">10</span>
                   <span class="text-base">€/year</span>
                 </h3>
               </div>
@@ -811,110 +397,51 @@
               <div class="bg-white middle">
                 <ul>
                   <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
                   >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="fa fa-rocket"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        5k API hits
                       </span>
                     </div>
                   </li>
                   <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
                   >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="plan-icon fa fa-download"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        <b>Infinite </b>dls
                       </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
+                    </div>
+                  </li>
+
+                  <li
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
+                  >
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="plan-icon fa fa-exclamation-triangle"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        <b>No Spotweb</b>
                       </span>
                     </div>
                   </li>
                   <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
                   >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
-                      </span>
-                    </div>
-                  </li>
-                  <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
-                  >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="plan-icon fa fa-exclamation-triangle"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        4K XXX
                       </span>
                     </div>
                   </li>
@@ -929,24 +456,14 @@
                 </button>
               </div>
             </div>
-            <div class="bg-white shadow-sm">
+            <div class="bg-white shadow-sm drop-shadow">
               <div
-                class="
-                  flex flex-col
-                  items-center
-                  justify-center
-                  p-4
-                  py-10
-                  text-white
-                  bg-black
-                  rounded-lg
-                  top
-                "
+                class="flex flex-col items-center justify-center p-4 py-10 text-white bg-blue-400 rounded-lg  top"
               >
-                <h4 class="mb-5 text-4xl font-light leading-none">FREE</h4>
+                <h4 class="mb-5 text-4xl font-light leading-none">PRO</h4>
 
                 <h3 class="font-bold">
-                  <span class="text-4xl">0</span>
+                  <span class="text-4xl">20</span>
                   <span class="text-base">€/year</span>
                 </h3>
               </div>
@@ -954,110 +471,51 @@
               <div class="bg-white middle">
                 <ul>
                   <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
                   >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="fa fa-rocket"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        20k API hits
                       </span>
                     </div>
                   </li>
                   <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
                   >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="plan-icon fa fa-download"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        <b>Infinite </b>dls
                       </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
+                    </div>
+                  </li>
+
+                  <li
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
+                  >
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="plan-icon fa fa-exclamation-triangle"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        <b>No Spotweb</b>
                       </span>
                     </div>
                   </li>
                   <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
                   >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
-                      </span>
-                    </div>
-                  </li>
-                  <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
-                  >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="plan-icon fa fa-exclamation-triangle"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        4K XXX
                       </span>
                     </div>
                   </li>
@@ -1072,24 +530,14 @@
                 </button>
               </div>
             </div>
-            <div class="bg-white shadow-sm">
+            <div class="bg-white shadow-sm drop-shadow">
               <div
-                class="
-                  flex flex-col
-                  items-center
-                  justify-center
-                  p-4
-                  py-10
-                  text-white
-                  bg-black
-                  rounded-lg
-                  top
-                "
+                class="flex flex-col items-center justify-center p-4 py-10 text-white bg-black rounded-lg  top"
               >
-                <h4 class="mb-5 text-4xl font-light leading-none">FREE</h4>
+                <h4 class="mb-5 text-4xl font-light leading-none">ELITE</h4>
 
                 <h3 class="font-bold">
-                  <span class="text-4xl">0</span>
+                  <span class="text-4xl">35</span>
                   <span class="text-base">€/year</span>
                 </h3>
               </div>
@@ -1097,110 +545,51 @@
               <div class="bg-white middle">
                 <ul>
                   <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
                   >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="fa fa-rocket"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        Unl. API hits
                       </span>
                     </div>
                   </li>
                   <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
                   >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="plan-icon fa fa-download"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        <b> Infinite</b>dls
                       </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
+                    </div>
+                  </li>
+
+                  <li
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
+                  >
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="plan-icon fa fa-exclamation-triangle"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        <b>Spotweb</b>
                       </span>
                     </div>
                   </li>
                   <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
+                    class="flex px-2 py-2 mb-2 leading-10 border-b border-gray-200 "
                   >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
-                      </span>
-                    </div>
-                  </li>
-                  <li
-                    class="
-                      flex
-                      px-2
-                      py-2
-                      mb-2
-                      leading-10
-                      border-b border-gray-200
-                    "
-                  >
-                    <div class="flex items-center justify-between w-3/4 py-2">
-                      <span class="text-xl">
-                        <svg
-                          style="width: 24px; height: 24px"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M13.13 22.19L11.5 18.36C13.07 17.78 14.54 17 15.9 16.09L13.13 22.19M5.64 12.5L1.81 10.87L7.91 8.1C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39C21.61 2.39 16.66 .269 11 5.93C8.81 8.12 7.5 10.53 6.65 12.64C6.37 13.39 6.56 14.21 7.11 14.77L9.24 16.89C9.79 17.45 10.61 17.63 11.36 17.35C13.5 16.53 15.88 15.19 18.07 13C23.73 7.34 21.61 2.39 21.61 2.39M14.54 9.46C13.76 8.68 13.76 7.41 14.54 6.63S16.59 5.85 17.37 6.63C18.14 7.41 18.15 8.68 17.37 9.46C16.59 10.24 15.32 10.24 14.54 9.46M8.88 16.53L7.47 15.12L8.88 16.53M6.24 22L9.88 18.36C9.54 18.27 9.21 18.12 8.91 17.91L4.83 22H6.24M2 22H3.41L8.18 17.24L6.76 15.83L2 20.59V22M2 19.17L6.09 15.09C5.88 14.79 5.73 14.47 5.64 14.12L2 17.76V19.17Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class="text-lg font-normal text-gray-500">
-                        25 API hits
+                    <div
+                      class="flex items-center w-full px-6 py-2 mx-auto space-x-4 "
+                    >
+                      <i class="plan-icon fa fa-exclamation-triangle"></i>
+                      <span class="text-base font-normal text-gray-500">
+                        4K XXX
                       </span>
                     </div>
                   </li>
@@ -1257,13 +646,7 @@
             </p>
 
             <ul
-              class="
-                flex
-                items-center
-                space-x-3
-                text-sm
-                divide-x-2 divide-gray-500
-              "
+              class="flex items-center space-x-3 text-sm divide-x-2 divide-gray-500 "
             >
               <li class="px-3 text-blue-500">Home</li>
               <li class="px-3 text-blue-500">Terms of Use</li>
