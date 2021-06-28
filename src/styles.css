@@ -1,14 +1,19 @@
 @tailwind base;
 @tailwind components;
 .dropdown-content {
-  @apply hidden;
+  @apply hidden h-0;
   @apply absolute;
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
+  @apply transition-all duration-500;
 }
 
 .dropdown:hover .dropdown-content {
-  @apply block;
+  @apply block h-auto;
+  @apply transition-all duration-500;
+}
+.selectr-input-clear {
+  display: none !important;
 }
 @tailwind utilities;
