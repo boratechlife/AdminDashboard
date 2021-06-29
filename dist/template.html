@@ -36,7 +36,7 @@
     ></script>
   </head>
   <body
-    class="overflow-x-hidden bg-gray-100 dark:bg-gray-800"
+    class="overflow-x-hidden bg-gray-100 dark:text-gray-100 dark:bg-gray-800"
     x-data="{ SideBarOpen: false }"
   >
     <header class="fixed top-0 z-50 w-full bg-dark dark:bg-gray-900">
@@ -783,425 +783,386 @@
 
       <!-- MAIN CONTENT -->
       <section class="p-4 main-content section">
-        <div class="py-6 bg-white shadow-sm drop-shadow-sm">
-          <div class="px-6 space-y-5">
-            <p class="text-base leading-snug text-gray-800">
-              Because we make our service available for free, we rely on
-              voluntary donations and contributions in order to keep the
-              indexing platform going.
+        <div class="container p-4 mx-auto bg-white shadow-sm drop-shadow-md">
+          <div class="my-3">
+            <p>
+              You are buying the Basic membership. Please select one of the
+              payment methods below and click "Place order" to continue.
             </p>
-
-            <p class="text-base leading-snug text-gray-800">
-              If you need unrestricted access to the API or RSS feeds (necessary
-              for software like Sonarr/Radarr/SickRage etc.) then it's best to
-              get one of our premium levels. An indexer like NZB Finder runs on
-              pretty heavy hardware and uses tons of bandwidth daily to bring
-              you the best Usenet has to offer. All this isn't free and requires
-              a lot of personal time on top of that. Therefore every
-              contribution helps to keep the service online and to keep it as
-              fast as it currently is.
+            <p>
+              If you encounter any errors, please try disabling your Adblocker
+              or NoScript plugins and reloading the page.
             </p>
           </div>
 
-          <div class="mx-6 mt-6 bg-white shadow-sm drop-shadow-sm">
-            <div
-              class="
-                w-full
-                px-3
-                py-2
-                leading-10
-                bg-[#d9edf7]
-                text-[#31708f]
-                border-[#bce8f1]
-                bg-opacity-70
-              "
-            >
-              <h4 class="uppercase">Notice</h4>
-            </div>
-
-            <div class="px-3 py-2">
-              <div class="mb-4 item">
-                <h4 class="mb-2 text-lg font-light uppercase">security</h4>
-                <p class="text-base text-gray-800">
-                  At no point do your card details touch our servers. All
-                  sensitive information is instantly transmitted client-side to
-                  our PCI-DSS compliant payment processor (currently Stripe
-                  Inc.) and we destroy the form fields before processing
-                  anything else.
-                </p>
-              </div>
-
-              <div class="mb-4 item">
-                <h4 class="mb-2 text-lg font-light uppercase">
-                  PAYMENT METHODS
-                </h4>
-                <p class="text-base text-gray-800">
-                  We are only able to process these creditcards: Visa,
-                  Mastercard and AMEX. Additionally, if you are from Europe we
-                  offer a few localized payment methods for your country. You'll
-                  see them on the checkout page. Please do not e-mail us about
-                  PayPal, we do not support it and never will.
-                </p>
-              </div>
-
-              <div class="mb-4 item">
-                <h4 class="mb-2 text-lg font-light uppercase">
-                  DECLINED PAYMENTS
-                </h4>
-                <p class="text-base text-gray-800">
-                  Payments can be denied by our payment providers if you're
-                  using Tor, Proxies or a VPN from a known provider. Please keep
-                  this in mind when your payment fails but the information was
-                  entered correctly. We cannot see why your payment fails,
-                  please contact your bank first instead of e-mailing us.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-6 tab" x-data="{activePage: 'payment'}">
-            <div class="border-b border-gray-200 tab list">
-              <ul class="flex space-x-4 list">
-                <li
-                  x-bind:class="activePage ==='payment' ? 'border-b-2 border-primary text-primary' : 'border-transparent'"
-                  class="px-3 py-2 leading-9 text-gray-500 transition-all duration-300 cursor-pointer  hover:border-b-2 hover:border-primary hover:text-primary"
-                  @click="activePage = 'payment'"
-                >
-                  Payment options
-                </li>
-                <li
-                  x-bind:class="activePage ==='anonymous' ? 'border-b-2 border-primary text-primary' : 'border-transparent'"
-                  class="px-3 py-2 leading-9 text-gray-500 transition-all duration-300 cursor-pointer  hover:border-b-2 hover:border-primary hover:text-primary"
-                  @click="activePage = 'anonymous'"
-                >
-                  Anonymous VPN
-                </li>
-                <li
-                  x-bind:class="activePage ==='secure' ? 'border-b-2 border-primary text-primary' : 'border-transparent'"
-                  class="px-3 py-2 leading-9 text-gray-500 transition-all duration-300 cursor-pointer  hover:border-b-2 hover:border-primary hover:text-primary"
-                  @click="activePage = 'secure'"
-                >
-                  Secure Password Manager
-                </li>
-                <li
-                  x-bind:class="activePage ==='encrypted' ? 'border-b-2 border-primary text-primary' : 'border-transparent'"
-                  class="px-3 py-2 leading-9 text-gray-500 transition-all duration-300 cursor-pointer  hover:border-b-2 hover:border-primary hover:text-primary"
-                  @click="activePage = 'encrypted'"
-                >
-                  Encrypted File Storage
-                </li>
-              </ul>
-            </div>
-            <div class="tab-content">
-              <div x-show="activePage === 'payment'" class="">
-                <div class="px-6 py-3">
-                  <p class="leading-snug text-gray-800">
-                    See our plans below. All of our plans are (for now) only
-                    available as a pre-paid or "manual" option which you need to
-                    extend yourself each year.
-                  </p>
-                  <p class="leading-snug text-gray-800">
-                    We will <strong>ALWAYS</strong> e-mail you before the
-                    expiration date, so make sure your e-mail address is valid
-                    and check your spam folders.
-                  </p>
-                </div>
-
-                <div
-                  class="flex items-center justify-center w-full mt-10 pricing"
-                >
-                  <div class="w-2/3">
-                    <div class="grid grid-cols-3 gap-6">
-                      <div class="card">
-                        <div class="w-full px-3 bg-gray-100 header">
-                          <h4
-                            class="
-                              text-2xl
-                              font-bold
-                              leading-10
-                              py-2
-                              uppercase
-                              text-[#319db5]
-                            "
-                          >
-                            Basic
-                          </h4>
-                        </div>
-
-                        <div class="px-3 py-3 body">
-                          <h4 class="text-3xl font-bold">
-                            €10<small class="text-sm">/yr</small>
-                          </h4>
-                          <div class="pl-2 content">
-                            <p class="my-4 text-sm italic text-black">
-                              Great for beginners
-                            </p>
-                            <hr class="mb-3 border border-gray-100" />
-                            <ul class="mt-4 space-y-6">
-                              <li class="text-gray-800">
-                                - <strong>5000</strong> API requests (per 24h)
-                              </li>
-
-                              <li class="text-gray-800">
-                                - <strong>Infinite</strong> Downloads
-                              </li>
-
-                              <li class="text-gray-800">
-                                - <strong>XXX</strong> Access
-                              </li>
-                            </ul>
-                          </div>
-
-                          <div class="flex items-center justify-center mt-14">
-                            <button
-                              class="px-6 py-1 text-sm leading-10 border-2  rounded-3xl border-primary text-primary"
-                            >
-                              Order(One Year Prepaid)
-                            </button>
-                          </div>
-                        </div>
+          <div class="flex flex-wrap w-full mt-6">
+            <div class="w-3/4 px-3">
+              <div class="border rounded shadow-sm drop-shadow-md">
+                <form class="divide-y">
+                  <div class="flex items-center w-full px-4 py-3 item">
+                    <div class="w-1/4">
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="radio"
+                          name="creditcard"
+                          class="w-5 h-5"
+                          id=""
+                        />
+                        <label for="creditcard"> Creditcard </label>
                       </div>
-
-                      <div class="card">
-                        <div class="w-full px-3 bg-gray-100 header">
-                          <h4
-                            class="
-                              text-2xl
-                              font-bold
-                              leading-10
-                              py-2
-                              uppercase
-                              text-[#319db5]
-                            "
-                          >
-                            PRO
-                          </h4>
-                        </div>
-
-                        <div class="px-3 py-3 body">
-                          <h4 class="text-3xl font-bold">
-                            €10<small class="text-sm">/yr</small>
-                          </h4>
-                          <div class="pl-2 content">
-                            <p class="my-4 text-sm italic text-black">
-                              Great for beginners
-                            </p>
-                            <hr class="mb-3 border border-gray-100" />
-                            <ul class="mt-4 space-y-6">
-                              <li class="text-gray-800">
-                                - <strong>5000</strong> API requests (per 24h)
-                              </li>
-
-                              <li class="text-gray-800">
-                                - <strong>Infinite</strong> Downloads
-                              </li>
-
-                              <li class="text-gray-800">
-                                - <strong>XXX</strong> Access
-                              </li>
-                            </ul>
-                          </div>
-
-                          <div class="flex items-center justify-center mt-14">
-                            <button
-                              class="px-6 py-1 text-sm leading-10 border-2  rounded-3xl border-primary text-primary"
-                            >
-                              Order(One Year Prepaid)
-                            </button>
-                          </div>
-                        </div>
+                    </div>
+                    <div class="w-3/4">
+                      <div
+                        class="inline-flex spaxe-x-2"
+                        style="margin-top: 8px"
+                      >
+                        <img
+                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/cards/visa.png"
+                          width="40"
+                        />
+                        <img
+                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/cards/mastercard.png"
+                          width="40"
+                        />
+                        <img
+                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/cards/amex.png"
+                          width="40"
+                        />
+                        We accept these credit cards.
                       </div>
+                    </div>
+                  </div>
 
-                      <div class="card">
-                        <div class="w-full px-3 bg-gray-100 header">
-                          <h4
-                            class="
-                              text-2xl
-                              font-bold
-                              leading-10
-                              py-2
-                              uppercase
-                              text-[#319db5]
-                            "
-                          >
-                            ELITE
-                          </h4>
-                        </div>
-
-                        <div class="px-3 py-3 body">
-                          <h4 class="text-3xl font-bold">
-                            €10<small class="text-sm">/yr</small>
-                          </h4>
-                          <div class="pl-2 content">
-                            <p class="my-4 text-sm italic text-black">
-                              Great for beginners
-                            </p>
-                            <hr class="mb-3 border border-gray-100" />
-                            <ul class="mt-4 space-y-6">
-                              <li class="text-gray-800">
-                                - <strong>5000</strong> API requests (per 24h)
-                              </li>
-
-                              <li class="text-gray-800">
-                                - <strong>Infinite</strong> Downloads
-                              </li>
-
-                              <li class="text-gray-800">
-                                - <strong>XXX</strong> Access
-                              </li>
-                            </ul>
-                          </div>
-
-                          <div class="flex items-center justify-center mt-14">
-                            <button
-                              class="px-6 py-1 text-sm leading-10 border-2  rounded-3xl border-primary text-primary"
-                            >
-                              Order(One Year Prepaid)
-                            </button>
-                          </div>
+                  <div class="flex items-center w-full px-4 py-3 item">
+                    <div class="w-1/4">
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="radio"
+                          name="creditcard"
+                          class="w-5 h-5"
+                          id=""
+                        />
+                        <label for="creditcard"> Cryptocurrencies </label>
+                      </div>
+                    </div>
+                    <div class="w-3/4">
+                      <div
+                        class="inline-flex flex-wrap spaxe-x-2"
+                        style="margin-top: 8px"
+                      >
+                        <img
+                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/btc.png"
+                          width="35"
+                        />
+                        <img
+                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/bch.png"
+                          width="35"
+                        />
+                        <img
+                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/eth.png"
+                          width="35"
+                        />
+                        <img
+                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/ltc.png"
+                          width="35"
+                        />
+                        <br />
+                        <div class="w-full">
+                          Crypto payments are not instant. Transactions may take
+                          a few hours to complete.
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div x-show="activePage === 'anonymous'" class="px-4 py-3">
-                <p class="mb-3">
-                  Many of our users want to stay fully anonymous when using the
-                  internet and/or downloading files. We can reccommend either
-                  NordVPN or PrivateInternetAccess. Keep in mind that your
-                  payment might get declined when paying with a creditcard with
-                  a VPN connected.
-                </p>
-                <a
-                  href="https://go.nordvpn.net/aff_c?offer_id=15&amp;aff_id=26135&amp;url_id=902"
-                  title="NordVPN"
-                  target="_blank"
-                  class="inline"
-                  ><img
-                    src="https://nzbfinder.ws/assets/nzbfinder-theme/images/nordvpn_logo.png"
-                /></a>
 
-                <ul style="padding-left: 25px" class="my-6 space-y-4 list-disc">
-                  <li>
-                    Being based in Panama, NordVPN falls under the country’s
-                    jurisdiction and Panama has no data retention laws
-                  </li>
-                  <li>
-                    Military-grade AES-256-CBC encryption and a variety of
-                    protocols to choose from: OpenVPN (UDP and TCP), PPTP,
-                    L2TP/IPSec, IKEv2/IPSec
-                  </li>
-                  <li>Risk-free 30-day money-back guarantee</li>
-                  <li>Unlimited bandwidth and data</li>
-                  <li>Strict and audited "no logs" policy.</li>
-                  <li>Cryptocurrencies accepted</li>
-                </ul>
-
-                <div class="my-2">
-                  <a
-                    href="https://go.nordvpn.net/aff_c?offer_id=15&amp;aff_id=26135&amp;url_id=902"
-                    title="NordVPN"
-                    target="_blank"
-                    ><img
-                      src="https://nzbfinder.ws/assets/nzbfinder-theme/images/nordvpn2.jpeg"
-                  /></a>
-                </div>
-
-                <div class="my-2">
-                  <h2 class="mb-3 text-xl">Private Internet Access</h2>
-
-                  <p class="mb-3">
-                    Another option is PIA, which has also proven themselves to
-                    be a rock-solid player in the VPN market. Click the banner
-                    below to check them out.
-                  </p>
-
-                  <a
-                    href="https://www.privateinternetaccess.com/pages/buy-vpn/nzbfinder"
-                    title="Buy VPN"
-                    target="_blank"
-                    ><img
-                      border="0"
-                      src="https://nzbfinder.ws/assets/nzbfinder-theme/images/pia.gif"
-                  /></a>
-                </div>
-              </div>
-
-              <div x-show="activePage === 'secure'" class="">
-                <div class="p-3">
-                  <a
-                    href="https://go.nordpass.io/aff_c?offer_id=488&amp;aff_id=26135&amp;url_id=9356"
-                    title="NordPass"
-                    target="_blank"
-                    ><img
-                      src="https://nzbfinder.ws/assets/nzbfinder-theme/images/nordpass_logo.png"
-                  /></a>
-
-                  <p class="my-3">
-                    With NordPass, store your passwords in the cloud, access
-                    them on desktop, mobile, or your favorite browser. All
-                    encrypted on your device, for your eyes only.
-                  </p>
-
-                  <ul class="my-6 list-disc" style="padding-left: 25px">
-                    <li>Auto-fill passwords</li>
-                    <li>Risk-free 30-day money-back guarantee</li>
-                    <li>Auto-generate secure passwords</li>
-                    <li>Cryptocurrencies accepted</li>
-                    <li>Securely store creditcard information</li>
-                  </ul>
-
-                  <div class="my-3">
-                    <a
-                      href="https://go.nordpass.io/aff_c?offer_id=488&amp;aff_id=26135&amp;url_id=9356"
-                      title="NordPass"
-                      target="_blank"
-                      ><img
-                        src="https://nzbfinder.ws/assets/nzbfinder-theme/images/nordpass.jpeg"
-                    /></a>
+                  <div class="flex items-center w-full px-4 py-3 item">
+                    <div class="w-1/4">
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="radio"
+                          name="creditcard"
+                          class="w-5 h-5"
+                          id=""
+                        />
+                        <label for=" iDeal "> iDeal </label>
+                      </div>
+                    </div>
+                    <div class="w-3/4">
+                      <div
+                        class="flex flex-wrap items-center"
+                        style="margin-top: 8px"
+                      >
+                        <a class="media-left" href="#">
+                          <img
+                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/ideal.svg"
+                            width="40"
+                          />
+                        </a>
+                        <div class="px-3">Popular in The Netherlands.</div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div x-show="activePage === 'encrypted'" class="">
-                <div class="p-3 py-6">
-                  <a
-                    href="https://go.nordlocker.net/aff_c?offer_id=489&amp;aff_id=26135&amp;url_id=8759"
-                    title="NordLocker"
-                    target="_blank"
-                    ><img
-                      src="https://nzbfinder.ws/assets/nzbfinder-theme/images/nordlocker_logo.png"
-                  /></a>
 
-                  <p class="my-3">
-                    NordLocker is not cloud storage. We believe it's better.
-                    Think of it as middleware that adds a security layer to your
-                    data. NordLocker never stores your files anywhere. Instead
-                    it lets you maintain the flexibility of keeping them
-                    wherever you're used to, only securely.
-                  </p>
+                  <div class="flex items-center w-full px-4 py-3 item">
+                    <div class="w-1/4">
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="radio"
+                          name="creditcard"
+                          class="w-5 h-5"
+                          id=""
+                        />
+                        <label for=" iDeal "> Bancontact </label>
+                      </div>
+                    </div>
+                    <div class="w-3/4">
+                      <div
+                        class="flex flex-wrap items-center"
+                        style="margin-top: 8px"
+                      >
+                        <a class="media-left" href="#">
+                          <img
+                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/bancontact.svg"
+                            width="40"
+                          />
+                        </a>
+                        <div class="px-3 py-2">Popular in Belgium.</div>
+                      </div>
+                    </div>
+                  </div>
 
-                  <ul
-                    class="my-4 space-y-3 list-disc"
-                    style="padding-left: 25px"
-                  >
-                    <li>Security powered by state-of-the-art encryption</li>
-                    <li>Risk-free 30-day money-back guarantee</li>
-                    <li>Secure file sharing</li>
-                    <li>Cryptocurrencies accepted</li>
-                    <li>One password for all your lockers</li>
-                  </ul>
+                  <div class="flex items-center w-full px-4 py-3 item">
+                    <div class="w-1/4">
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="radio"
+                          name="creditcard"
+                          class="w-5 h-5"
+                          id=""
+                        />
+                        <label for="  Belfius Pay  "> Belfius Pay </label>
+                      </div>
+                    </div>
+                    <div class="w-3/4">
+                      <div
+                        class="flex flex-wrap items-center"
+                        style="margin-top: 8px"
+                      >
+                        <a class="" href="#">
+                          <img
+                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/belfius.svg"
+                            width="40"
+                          />
+                        </a>
+                        <div class="px-3">Popular in Belgium.</div>
+                      </div>
+                    </div>
+                  </div>
 
-                  <div class="my-4">
-                    <a
-                      href="https://go.nordlocker.net/aff_c?offer_id=489&amp;aff_id=26135&amp;url_id=8759"
-                      title="NordLocker"
-                      target="_blank"
-                      class="text-blue-500"
-                      >Click here to checkout NordLocker.</a
+                  <div class="flex items-center w-full px-4 py-3 item">
+                    <div class="w-1/4">
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="radio"
+                          name="creditcard"
+                          class="w-5 h-5"
+                          id=""
+                        />
+                        <label for="   KBC/CBC   "> KBC/CBC </label>
+                      </div>
+                    </div>
+                    <div class="w-3/4">
+                      <div
+                        class="flex flex-wrap items-center"
+                        style="margin-top: 8px"
+                      >
+                        <a class="" href="#">
+                          <img
+                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/kbc.svg"
+                            width="40"
+                          />
+                        </a>
+                        <div class="px-3">Popular in Belgium.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center w-full px-4 py-3 item">
+                    <div class="w-1/4">
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="radio"
+                          name="creditcard"
+                          class="w-5 h-5"
+                          id=""
+                        />
+                        <label for="    Sofort    "> Sofort </label>
+                      </div>
+                    </div>
+                    <div class="w-3/4">
+                      <div
+                        class="flex flex-wrap items-center"
+                        style="margin-top: 8px"
+                      >
+                        <a class="" href="#">
+                          <img
+                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/sofort.svg"
+                            width="40"
+                          />
+                        </a>
+                        <div class="px-3">
+                          Payment method supported in several European
+                          countries.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center w-full px-4 py-3 item">
+                    <div class="w-1/4">
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="radio"
+                          name="creditcard"
+                          class="w-5 h-5"
+                          id=""
+                        />
+                        <label for="     Giropay     "> Giropay </label>
+                      </div>
+                    </div>
+                    <div class="w-3/4">
+                      <div
+                        class="flex flex-wrap items-center"
+                        style="margin-top: 8px"
+                      >
+                        <a class="media-left" href="#">
+                          <img
+                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/giropay.svg"
+                            width="40"
+                          />
+                        </a>
+                        <div class="px-3">Popular in Germany.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center w-full px-4 py-3 item">
+                    <div class="w-1/4">
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="radio"
+                          name="creditcard"
+                          class="w-5 h-5"
+                          id=""
+                        />
+                        <label for="     Giropay     "> EPS </label>
+                      </div>
+                    </div>
+                    <div class="w-3/4">
+                      <div
+                        class="flex flex-wrap items-center"
+                        style="margin-top: 8px"
+                      >
+                        <a class="media-left" href="#">
+                          <img
+                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/eps.svg"
+                            width="40"
+                          />
+                        </a>
+                        <div class="px-3">Popular in Austria.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center w-full px-4 py-3 item">
+                    <div class="w-1/4">
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="radio"
+                          name="creditcard"
+                          class="w-5 h-5"
+                          id=""
+                        />
+                        <label for="      Przelewy24      "> Przelewy24 </label>
+                      </div>
+                    </div>
+                    <div class="w-3/4">
+                      <div
+                        class="flex flex-wrap items-center"
+                        style="margin-top: 8px"
+                      >
+                        <a class="media-left" href="#">
+                          <img
+                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/przelewy24.png"
+                            width="40"
+                          />
+                        </a>
+                        <div class="px-3">Popular in Poland.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center w-full px-4 py-3 item">
+                    <div class="w-1/4">
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="radio"
+                          name="creditcard"
+                          class="w-5 h-5"
+                          id=""
+                        />
+                        <label for="      Przelewy24      "> AliPay </label>
+                      </div>
+                    </div>
+                    <div class="w-3/4">
+                      <div
+                        class="flex flex-wrap items-center"
+                        style="margin-top: 8px"
+                      >
+                        <a class="media-left" href="#">
+                          <img
+                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/alipay.png"
+                            width="40"
+                          />
+                        </a>
+                        <div class="px-3">Popular in China.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="p-3">
+                    <button
+                      class="w-full px-3 py-2 leading-10 text-center text-white rounded  bg-primary"
+                    >
+                      Place Order
+                    </button>
+                    <small
+                      >If the "Place order" button spins endlessly then your
+                      browser is probably blocking some scripts. Disable any
+                      adblockers or NoScript plugins and try again</small
                     >
                   </div>
-                </div>
+                </form>
+              </div>
+            </div>
+            <div class="w-1/4 px-3">
+              <div class="py-3 text-sm border rounded shadow-sm drop-shadow-md">
+                <h4 class="px-3 mb-3 text-2xl font-bold">Cart</h4>
+
+                <ul class="mt-6 list-reset">
+                  <li class="px-3 py-3 border-b" style="padding-top: 0px">
+                    Basic Membership
+                    <span class="float-right"><strong>€10</strong></span>
+                  </li>
+                  <li class="px-3 py-3 border-b">
+                    <span>VAT - NL (21%)</span>
+                    <span class="float-right"><strong>€2.1</strong></span>
+                  </li>
+                  <li class="px-3 py-3">
+                    <span>Total (EUR)</span>
+                    <span class="float-right"><strong>€12.1</strong></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
