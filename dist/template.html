@@ -78,7 +78,7 @@
                   ></span>
 
                   <div
-                    class="absolute w-40 text-gray-500  dark:text-gray-200 dark:bg-gray-900 dark:bg-gray-800 dark:text-gray-300 -left-6 top-10 dropdown-content"
+                    class="absolute w-40 text-gray-500 bg-white  dark:bg-gray-800 dark:text-gray-300 -left-6 top-10 dropdown-content"
                   >
                     <ul class="w-full py-2">
                       <li
@@ -149,7 +149,7 @@
                   ></span>
 
                   <div
-                    class="absolute w-40 text-gray-500  dark:text-gray-200 dark:bg-gray-900 dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
+                    class="absolute w-40 text-gray-500 bg-white  dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
                   >
                     <ul class="w-full py-2">
                       <li
@@ -195,7 +195,7 @@
                   ></span>
 
                   <div
-                    class="absolute w-40 text-gray-500  dark:text-gray-200 dark:bg-gray-900 dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
+                    class="absolute w-40 text-gray-500 bg-white  dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
                   >
                     <ul class="w-full py-2">
                       <li
@@ -273,7 +273,7 @@
                   ></span>
 
                   <div
-                    class="absolute w-40 text-gray-500  dark:text-gray-200 dark:bg-gray-900 dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
+                    class="absolute w-40 text-gray-500 bg-white  dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
                   >
                     <ul class="w-full py-2">
                       <li
@@ -348,7 +348,7 @@
                   ></span>
 
                   <div
-                    class="absolute w-40 text-gray-500  dark:text-gray-200 dark:bg-gray-900 dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
+                    class="absolute w-40 text-gray-500 bg-white  dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
                   >
                     <ul class="w-full py-2">
                       <li
@@ -393,7 +393,7 @@
                   ></span>
 
                   <div
-                    class="absolute w-40 text-gray-500  dark:text-gray-200 dark:bg-gray-900 dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
+                    class="absolute w-40 text-gray-500 bg-white  dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
                   >
                     <ul class="w-full py-2">
                       <li
@@ -456,9 +456,9 @@
             </nav>
           </div>
           <div
-            class="relative items-center hidden px-2 space-x-2 cursor-pointer  lg:flex userprofile dropdown"
+            class="relative flex items-center px-2 space-x-2 cursor-pointer  userprofile dropdown"
           >
-            <div class="w-10 h-10 bg-gray-200 rounded-full dark:bg-gray-800">
+            <div class="w-10 h-10 bg-gray-200 rounded-full">
               <img
                 src="./images/avatar.png"
                 alt=""
@@ -505,7 +505,7 @@
     </header>
 
     <div
-      x-bind:class="SideBarOpen ? 'w-64 z-50 block' : 'w-0 '"
+      x-bind:class="SideBarOpen ? 'w-64 block' : 'w-0 '"
       class="
         fixed
         left-0
@@ -516,8 +516,8 @@
         overflow-y-scroll
         transition-all
         duration-300
-        dark:bg-gray-900
         bg-white
+        dark:bg-gray-800
         sidebar
       "
     >
@@ -621,7 +621,7 @@
             </h4>
             <ul class="w-full divide-y dark:divide-gray-600">
               <li
-                class="flex items-center w-full py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center w-full py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="text-lg fa fa-home"></i>
 
@@ -629,7 +629,7 @@
               </li>
 
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-search"></i>
 
@@ -637,14 +637,14 @@
               </li>
 
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-fire"></i>
 
                 <p>Popular Downloads</p>
               </li>
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-gift"></i>
 
@@ -652,14 +652,14 @@
               </li>
 
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-globe"></i>
 
                 <p>Spotweb</p>
               </li>
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-server"></i>
 
@@ -667,14 +667,14 @@
               </li>
 
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-list"></i>
 
                 <p>Browse Groups</p>
               </li>
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-shopping-cart"></i>
 
@@ -682,7 +682,7 @@
               </li>
 
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-envelope"></i>
 
@@ -690,7 +690,7 @@
               </li>
 
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-flag"></i>
 
@@ -698,7 +698,7 @@
               </li>
 
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-cogs"></i>
 
@@ -715,14 +715,14 @@
             </h4>
             <ul class="divide-y dark:divide-gray-500">
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-cloud"></i>
 
                 <p>API</p>
               </li>
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-rss"></i>
 
@@ -730,7 +730,7 @@
               </li>
 
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-cog" aria-hidden="true"></i>
 
@@ -738,7 +738,7 @@
               </li>
 
               <li
-                class="flex items-center py-1 space-x-2 leading-10 text-gray-500 cursor-pointer  dark:hover:text-gray-200 dark:text-gray-300"
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
               >
                 <i class="fa fa-question-circle"></i>
 
@@ -781,498 +781,11 @@
         </div>
       </section>
 
-      <!-- MAIN CONTENT -->
-      <section class="main-content section" x-data="{advancedSearch: true}">
-        <div class="flex items-center justify-center py-4">
-          <button
-            @click="advancedSearch = !advancedSearch"
-            class="
-              px-6
-              py-2
-              leading-10
-              text-sm
-              rounded
-              shadow-sm
-              border
-              text-[#ff8408]
-              border-[#ff8408]
-            "
-          >
-            Toggle Basic/Advanced Search
-          </button>
-        </div>
+ 
 
-        <div class="basic" x-show="!advancedSearch">
-          <div class="container w-full mx-auto dark:bg-gray-900">
-            <div
-              class="flex items-center justify-between w-full px-3 py-3 space-x-4 leading-10  lg:w-1/2 drop-shadow-md"
-            >
-              <input
-                type="text"
-                class="w-full px-4 py-2 leading-9 bg-gray-100 rounded outline-none  dark:bg-gray-800 focus:border focus:border-primary"
-                placeholder="What are you looking for?"
-              />
-              <button
-                class="px-6 py-2 text-white rounded outline-none appearance-none  bg-primary"
-              >
-                submit
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="basic" x-show="advancedSearch">
-          <div class="container px-4 mx-auto">
-            <form class="w-full">
-              <div
-                class="px-4 py-3 font-bold leading-10 text-center text-white  bg-primary"
-              >
-                Advanced Search
-              </div>
-              <table
-                class="min-w-full divide-y divide-gray-200  dark:bg-gray-900 drop-shadow-sm"
-              >
-                <tr>
-                  <td
-                    class="w-2/12 px-6 py-4 text-sm text-gray-500  dark:text-gray-200 whitespace-nowrap"
-                  >
-                    <div class="flex flex-col">
-                      <p
-                        class="font-bold text-gray-600 uppercase  dark:text-gray-300"
-                      >
-                        Release Date:
-                      </p>
-
-                      <input
-                        type="text"
-                        name=""
-                        class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  lg:hidden dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                        id=""
-                      />
-                    </div>
-                  </td>
-                  <td
-                    class="hidden w-10/12 px-6 py-2 font-medium  lg:table-cell dark:bg-gray-900"
-                  >
-                    <input
-                      type="text"
-                      name=""
-                      class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                      id=""
-                    />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td
-                    class="w-2/12 px-6 py-2 text-sm text-gray-500  dark:text-gray-200 whitespace-nowrap"
-                  >
-                    <div class="flex flex-col">
-                      <p
-                        class="font-bold text-gray-600 uppercase  dark:text-gray-300"
-                      >
-                        ORIGINAL USENET NAME:
-                      </p>
-
-                      <input
-                        type="text"
-                        name=""
-                        class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  lg:hidden dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                        id=""
-                      />
-                    </div>
-                  </td>
-                  <td
-                    class="hidden w-10/12 px-6 py-4 font-medium  lg:table-cell dark:bg-gray-900"
-                  >
-                    <input
-                      type="text"
-                      name=""
-                      class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                      id=""
-                    />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td
-                    class="w-2/12 px-6 py-2 text-sm text-gray-500  dark:text-gray-200 whitespace-nowrap"
-                  >
-                    <div class="flex flex-col">
-                      <p
-                        class="font-bold text-gray-600 uppercase  dark:text-gray-300"
-                      >
-                        POSTER:
-                      </p>
-                      <input
-                        type="text"
-                        name=""
-                        class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  lg:hidden dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                        id=""
-                      />
-                    </div>
-                  </td>
-                  <td
-                    class="hidden w-10/12 px-6 py-4 font-medium  lg:table-cell dark:bg-gray-900"
-                  >
-                    <input
-                      type="text"
-                      name=""
-                      class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                      id=""
-                    />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td
-                    class="w-2/12 px-6 py-2 text-sm text-gray-500  dark:text-gray-200 whitespace-nowrap"
-                  >
-                    <div class="flex flex-col">
-                      <p
-                        class="font-bold text-gray-600 uppercase  dark:text-gray-300"
-                      >
-                        FILENAME:
-                      </p>
-
-                      <input
-                        type="text"
-                        name=""
-                        class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  lg:hidden dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                        id=""
-                      />
-                    </div>
-                  </td>
-                  <td
-                    class="hidden w-10/12 px-6 py-4 font-medium  lg:table-cell dark:bg-gray-900"
-                  >
-                    <input
-                      type="text"
-                      name=""
-                      class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                      id=""
-                    />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td
-                    class="w-2/12 px-6 py-2 text-sm text-gray-500  dark:text-gray-200 whitespace-nowrap"
-                  >
-                    <div class="flex flex-col">
-                      <p
-                        class="font-bold text-gray-600 uppercase  dark:text-gray-300"
-                      >
-                        MIN AGE(DAYS):
-                      </p>
-
-                      <input
-                        type="text"
-                        name=""
-                        class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  lg:hidden dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                        id=""
-                      />
-                    </div>
-                  </td>
-                  <td
-                    class="hidden w-10/12 px-6 py-4 font-medium  lg:table-cell dark:bg-gray-900"
-                  >
-                    <input
-                      type="text"
-                      name=""
-                      class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                      id=""
-                    />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td
-                    class="w-2/12 px-6 py-2 text-sm text-gray-500  dark:text-gray-200 whitespace-nowrap"
-                  >
-                    <div class="flex flex-col">
-                      <p
-                        class="font-bold text-gray-600 uppercase  dark:text-gray-300"
-                      >
-                        MAX AGE(DAYS):
-                      </p>
-                      <input
-                        type="text"
-                        name=""
-                        class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  lg:hidden dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                        id=""
-                      />
-                    </div>
-                  </td>
-                  <td
-                    class="hidden w-10/12 px-6 py-4 font-medium  lg:table-cell dark:bg-gray-900"
-                  >
-                    <input
-                      type="text"
-                      name=""
-                      class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                      id=""
-                    />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td
-                    class="w-2/12 px-6 py-2 text-sm text-gray-500  dark:text-gray-200 whitespace-nowrap"
-                  >
-                    <div class="flex flex-col">
-                      <p
-                        class="font-bold text-gray-600 uppercase  dark:text-gray-300"
-                      >
-                        Category:
-                      </p>
-
-                      <div
-                        class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  lg:hidden dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                        id=""
-                      >
-                        <div class="flex items-center justify-center">
-                          <div class="flex w-3/4 space-x-2">
-                            <div class="w-full">
-                              <select
-                                name=""
-                                class="w-full px-3 py-2 leading-10 text-gray-500  dark:text-gray-200 dark:bg-gray-900"
-                                id=""
-                              >
-                                <option>--select--</option>
-                                <option>200MB</option>
-
-                                <option>250MB</option>
-
-                                <option>500MB</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td
-                    class="hidden w-10/12 px-6 py-4 font-medium  lg:table-cell dark:bg-gray-900"
-                  >
-                    <div
-                      class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                      id=""
-                    >
-                      <div class="flex items-center justify-center">
-                        <div class="flex w-3/4 space-x-2">
-                          <div class="w-full">
-                            <select
-                              name=""
-                              class="w-full px-3 py-2 leading-10 text-gray-500  dark:text-gray-200 dark:bg-gray-900"
-                              id=""
-                            >
-                              <option>--select--</option>
-                              <option>200MB</option>
-
-                              <option>250MB</option>
-
-                              <option>500MB</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td
-                    class="w-2/12 px-6 py-2 text-sm text-gray-500  dark:text-gray-200 whitespace-nowrap"
-                  >
-                    <div class="flex flex-col">
-                      <p
-                        class="font-bold text-gray-600 uppercase  dark:text-gray-300"
-                      >
-                        Group:
-                      </p>
-                      <div
-                        class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  lg:hidden dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                        id=""
-                      >
-                        <div class="flex items-center justify-center">
-                          <div class="flex w-3/4 space-x-2">
-                            <div class="w-full">
-                              <select
-                                name=""
-                                class="w-full px-3 py-2 leading-10 text-gray-500  dark:text-gray-200 dark:bg-gray-900"
-                                id=""
-                              >
-                                <option>--select--</option>
-                                <option>200MB</option>
-
-                                <option>250MB</option>
-
-                                <option>500MB</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td
-                    class="hidden w-10/12 px-6 py-4 font-medium  lg:table-cell dark:bg-gray-900"
-                  >
-                    <div
-                      class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                      id=""
-                    >
-                      <div class="flex items-center justify-center">
-                        <div class="flex w-3/4 space-x-2">
-                          <div class="w-full">
-                            <select
-                              name=""
-                              class="w-full px-3 py-2 leading-10 text-gray-500  dark:text-gray-200 dark:bg-gray-900"
-                              id=""
-                            >
-                              <option>--select--</option>
-                              <option>200MB</option>
-
-                              <option>250MB</option>
-
-                              <option>500MB</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td
-                    class="w-2/12 px-6 py-2 text-sm text-gray-500  dark:text-gray-200 whitespace-nowrap"
-                  >
-                    <div class="flex flex-col">
-                      <p
-                        class="font-bold text-gray-600 uppercase  dark:text-gray-300"
-                      >
-                        MIN/MAX SIZE:
-                      </p>
-
-                      <div
-                        type="text"
-                        name=""
-                        class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  lg:hidden dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                        id=""
-                      >
-                        <div class="flex items-center justify-center">
-                          <div class="flex space-x-2">
-                            <div>
-                              <select
-                                name=""
-                                class="w-40 px-3 py-2 leading-10 text-gray-500  dark:text-gray-200 dark:bg-gray-900"
-                                id=""
-                              >
-                                <option>--select--</option>
-                                <option>200MB</option>
-
-                                <option>250MB</option>
-
-                                <option>500MB</option>
-                              </select>
-
-                              <select
-                                name=""
-                                class="w-40 px-3 py-2 leading-10 text-gray-500  dark:text-gray-200 dark:bg-gray-900"
-                                id=""
-                              >
-                                <option>--select--</option>
-                                <option>200MB</option>
-
-                                <option>250MB</option>
-
-                                <option>500MB</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td
-                    class="hidden w-10/12 px-6 py-4 font-medium  lg:table-cell dark:bg-gray-900"
-                  >
-                    <div
-                      type="text"
-                      name=""
-                      class="w-full px-3 py-2 leading-10 bg-gray-200 border border-transparent rounded outline-none  dark:bg-gray-800 whitespace-nowrap focus:border-primary"
-                      id=""
-                    >
-                      <div class="flex items-center justify-center">
-                        <div class="flex space-x-2">
-                          <div>
-                            <select
-                              name=""
-                              class="w-40 px-3 py-2 leading-10 text-gray-500  dark:text-gray-200 dark:bg-gray-900"
-                              id=""
-                            >
-                              <option>--select--</option>
-                              <option>200MB</option>
-
-                              <option>250MB</option>
-
-                              <option>500MB</option>
-                            </select>
-
-                            <select
-                              name=""
-                              class="w-40 px-3 py-2 leading-10 text-gray-500  dark:text-gray-200 dark:bg-gray-900"
-                              id=""
-                            >
-                              <option>--select--</option>
-                              <option>200MB</option>
-
-                              <option>250MB</option>
-
-                              <option>500MB</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td
-                    colspan="1"
-                    class="px-6 py-4 font-medium lg:hidden dark:bg-gray-900"
-                  >
-                    <div class="flex items-center justify-center w-full">
-                      <button
-                        class="px-4 py-2 text-white rounded outline-none appearance-none  bg-primary"
-                      >
-                        Search
-                      </button>
-                    </div>
-                  </td>
-
-                  <td
-                    colspan="2"
-                    class="hidden px-6 py-4 font-medium  lg:table-cell dark:bg-gray-900"
-                  >
-                    <div class="flex items-center justify-center w-full">
-                      <button
-                        class="px-4 py-2 text-white rounded outline-none appearance-none  bg-primary"
-                      >
-                        Search
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <!-- END MAIN CONTENT -->
+<section class="content">
+  Put your contetn in this section
+</section>
 
       <footer>
         <div class="container mx-auto">
