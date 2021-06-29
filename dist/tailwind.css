@@ -2009,4 +2009,8 @@ video {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+
+  .lg\:leading-8 {
+    line-height: 2rem;
+  }
 }
