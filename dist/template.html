@@ -36,7 +36,7 @@
     ></script>
   </head>
   <body
-    class="overflow-x-hidden bg-gray-100 dark:text-gray-100 dark:bg-gray-800"
+    class="overflow-x-hidden bg-gray-100 dark:bg-gray-800 dark:text-gray-100"
     x-data="{ SideBarOpen: false }"
   >
     <header class="fixed top-0 z-50 w-full bg-dark dark:bg-gray-900">
@@ -782,387 +782,323 @@
       </section>
 
       <!-- MAIN CONTENT -->
-      <section class="p-4 main-content section">
-        <div class="container p-4 mx-auto bg-white shadow-sm drop-shadow-md">
-          <div class="my-3">
-            <p>
-              You are buying the Basic membership. Please select one of the
-              payment methods below and click "Place order" to continue.
-            </p>
-            <p>
-              If you encounter any errors, please try disabling your Adblocker
-              or NoScript plugins and reloading the page.
-            </p>
-          </div>
-
-          <div class="flex flex-wrap w-full mt-6">
-            <div class="w-3/4 px-3">
-              <div class="border rounded shadow-sm drop-shadow-md">
-                <form class="divide-y">
-                  <div class="flex items-center w-full px-4 py-3 item">
-                    <div class="w-1/4">
-                      <div class="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          name="creditcard"
-                          class="w-5 h-5"
-                          id=""
-                        />
-                        <label for="creditcard"> Creditcard </label>
-                      </div>
-                    </div>
-                    <div class="w-3/4">
-                      <div
-                        class="inline-flex spaxe-x-2"
-                        style="margin-top: 8px"
-                      >
-                        <img
-                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/cards/visa.png"
-                          width="40"
-                        />
-                        <img
-                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/cards/mastercard.png"
-                          width="40"
-                        />
-                        <img
-                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/cards/amex.png"
-                          width="40"
-                        />
-                        We accept these credit cards.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center w-full px-4 py-3 item">
-                    <div class="w-1/4">
-                      <div class="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          name="creditcard"
-                          class="w-5 h-5"
-                          id=""
-                        />
-                        <label for="creditcard"> Cryptocurrencies </label>
-                      </div>
-                    </div>
-                    <div class="w-3/4">
-                      <div
-                        class="inline-flex flex-wrap spaxe-x-2"
-                        style="margin-top: 8px"
-                      >
-                        <img
-                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/btc.png"
-                          width="35"
-                        />
-                        <img
-                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/bch.png"
-                          width="35"
-                        />
-                        <img
-                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/eth.png"
-                          width="35"
-                        />
-                        <img
-                          src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/ltc.png"
-                          width="35"
-                        />
-                        <br />
-                        <div class="w-full">
-                          Crypto payments are not instant. Transactions may take
-                          a few hours to complete.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center w-full px-4 py-3 item">
-                    <div class="w-1/4">
-                      <div class="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          name="creditcard"
-                          class="w-5 h-5"
-                          id=""
-                        />
-                        <label for=" iDeal "> iDeal </label>
-                      </div>
-                    </div>
-                    <div class="w-3/4">
-                      <div
-                        class="flex flex-wrap items-center"
-                        style="margin-top: 8px"
-                      >
-                        <a class="media-left" href="#">
-                          <img
-                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/ideal.svg"
-                            width="40"
-                          />
-                        </a>
-                        <div class="px-3">Popular in The Netherlands.</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center w-full px-4 py-3 item">
-                    <div class="w-1/4">
-                      <div class="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          name="creditcard"
-                          class="w-5 h-5"
-                          id=""
-                        />
-                        <label for=" iDeal "> Bancontact </label>
-                      </div>
-                    </div>
-                    <div class="w-3/4">
-                      <div
-                        class="flex flex-wrap items-center"
-                        style="margin-top: 8px"
-                      >
-                        <a class="media-left" href="#">
-                          <img
-                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/bancontact.svg"
-                            width="40"
-                          />
-                        </a>
-                        <div class="px-3 py-2">Popular in Belgium.</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center w-full px-4 py-3 item">
-                    <div class="w-1/4">
-                      <div class="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          name="creditcard"
-                          class="w-5 h-5"
-                          id=""
-                        />
-                        <label for="  Belfius Pay  "> Belfius Pay </label>
-                      </div>
-                    </div>
-                    <div class="w-3/4">
-                      <div
-                        class="flex flex-wrap items-center"
-                        style="margin-top: 8px"
-                      >
-                        <a class="" href="#">
-                          <img
-                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/belfius.svg"
-                            width="40"
-                          />
-                        </a>
-                        <div class="px-3">Popular in Belgium.</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center w-full px-4 py-3 item">
-                    <div class="w-1/4">
-                      <div class="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          name="creditcard"
-                          class="w-5 h-5"
-                          id=""
-                        />
-                        <label for="   KBC/CBC   "> KBC/CBC </label>
-                      </div>
-                    </div>
-                    <div class="w-3/4">
-                      <div
-                        class="flex flex-wrap items-center"
-                        style="margin-top: 8px"
-                      >
-                        <a class="" href="#">
-                          <img
-                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/kbc.svg"
-                            width="40"
-                          />
-                        </a>
-                        <div class="px-3">Popular in Belgium.</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center w-full px-4 py-3 item">
-                    <div class="w-1/4">
-                      <div class="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          name="creditcard"
-                          class="w-5 h-5"
-                          id=""
-                        />
-                        <label for="    Sofort    "> Sofort </label>
-                      </div>
-                    </div>
-                    <div class="w-3/4">
-                      <div
-                        class="flex flex-wrap items-center"
-                        style="margin-top: 8px"
-                      >
-                        <a class="" href="#">
-                          <img
-                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/sofort.svg"
-                            width="40"
-                          />
-                        </a>
-                        <div class="px-3">
-                          Payment method supported in several European
-                          countries.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center w-full px-4 py-3 item">
-                    <div class="w-1/4">
-                      <div class="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          name="creditcard"
-                          class="w-5 h-5"
-                          id=""
-                        />
-                        <label for="     Giropay     "> Giropay </label>
-                      </div>
-                    </div>
-                    <div class="w-3/4">
-                      <div
-                        class="flex flex-wrap items-center"
-                        style="margin-top: 8px"
-                      >
-                        <a class="media-left" href="#">
-                          <img
-                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/giropay.svg"
-                            width="40"
-                          />
-                        </a>
-                        <div class="px-3">Popular in Germany.</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center w-full px-4 py-3 item">
-                    <div class="w-1/4">
-                      <div class="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          name="creditcard"
-                          class="w-5 h-5"
-                          id=""
-                        />
-                        <label for="     Giropay     "> EPS </label>
-                      </div>
-                    </div>
-                    <div class="w-3/4">
-                      <div
-                        class="flex flex-wrap items-center"
-                        style="margin-top: 8px"
-                      >
-                        <a class="media-left" href="#">
-                          <img
-                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/eps.svg"
-                            width="40"
-                          />
-                        </a>
-                        <div class="px-3">Popular in Austria.</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center w-full px-4 py-3 item">
-                    <div class="w-1/4">
-                      <div class="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          name="creditcard"
-                          class="w-5 h-5"
-                          id=""
-                        />
-                        <label for="      Przelewy24      "> Przelewy24 </label>
-                      </div>
-                    </div>
-                    <div class="w-3/4">
-                      <div
-                        class="flex flex-wrap items-center"
-                        style="margin-top: 8px"
-                      >
-                        <a class="media-left" href="#">
-                          <img
-                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/przelewy24.png"
-                            width="40"
-                          />
-                        </a>
-                        <div class="px-3">Popular in Poland.</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center w-full px-4 py-3 item">
-                    <div class="w-1/4">
-                      <div class="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          name="creditcard"
-                          class="w-5 h-5"
-                          id=""
-                        />
-                        <label for="      Przelewy24      "> AliPay </label>
-                      </div>
-                    </div>
-                    <div class="w-3/4">
-                      <div
-                        class="flex flex-wrap items-center"
-                        style="margin-top: 8px"
-                      >
-                        <a class="media-left" href="#">
-                          <img
-                            src="https://nzbfinder.ws/assets/nzbfinder-theme/images/payment-methods/alipay.png"
-                            width="40"
-                          />
-                        </a>
-                        <div class="px-3">Popular in China.</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="p-3">
-                    <button
-                      class="w-full px-3 py-2 leading-10 text-center text-white rounded  bg-primary"
-                    >
-                      Place Order
-                    </button>
-                    <small
-                      >If the "Place order" button spins endlessly then your
-                      browser is probably blocking some scripts. Disable any
-                      adblockers or NoScript plugins and try again</small
-                    >
-                  </div>
-                </form>
-              </div>
+      <section class="p-4 main-content section" x-data="{activePage: 'main'}">
+        <div class="container p-8 mx-auto bg-white shadow-sm drop-shadow-md">
+          <div class="wrappe">
+            <div class="border-b tabs">
+              <ul class="flex">
+                <li
+                  x-bind:class="activePage === 'main' ? 'border-primary': 'border-transparent'"
+                  @click="activePage = 'main'"
+                  class="px-3 py-2 text-lg border-b-2 cursor-pointer  hover:border-primary"
+                >
+                  Main
+                </li>
+                <li
+                  x-bind:class="activePage === 'payment' ? 'border-primary': 'border-transparent'"
+                  @click="activePage = 'payment'"
+                  class="px-3 py-2 text-lg border-b-2 cursor-pointer  hover:border-primary"
+                >
+                  Payment Info
+                </li>
+              </ul>
             </div>
-            <div class="w-1/4 px-3">
-              <div class="py-3 text-sm border rounded shadow-sm drop-shadow-md">
-                <h4 class="px-3 mb-3 text-2xl font-bold">Cart</h4>
+            <div class="py-6 tab-content">
+              <div class="" x-show="activePage === 'main'">
+                <table cellpadding="10" cellspacing="1" class="table w-full">
+                  <tbody>
+                    <tr valign="top">
+                      <td>
+                        <table
+                          class="table w-full"
+                          cellpadding="10"
+                          cellspacing="10"
+                        >
+                          <tbody>
+                            <tr class="text-white bg-primary">
+                              <td colspan="2">
+                                <strong>General</strong>
+                              </td>
+                            </tr>
+                            <tr class="border-b">
+                              <th width="200">Username</th>
+                              <td>BentoAdmin</td>
+                            </tr>
+                            <tr class="border-b">
+                              <th width="200">E-mail</th>
+                              <td>hello@nzbfinder.ws</td>
+                            </tr>
+                            <tr class="border-b">
+                              <th width="200">Registered</th>
+                              <td>Dec 13, 2012 (8.5 Yrs ago)</td>
+                            </tr>
+                            <tr class="border-b">
+                              <th width="200">Last Login</th>
+                              <td>Jun 13, 2021 (3 Mins ago)</td>
+                            </tr>
+                            <tr class="border-b">
+                              <th width="200">Account Type</th>
+                              <td>Admin</td>
+                            </tr>
+                            <tr class="border-b">
+                              <th width="200">
+                                <span
+                                  aria-hidden="true"
+                                  data-trigger="hover"
+                                  data-toggle="referral-popover"
+                                  title=""
+                                  data-container="body"
+                                  data-original-title="Referral Info"
+                                >
+                                  Referral Link
+                                  <i class="fas fa-question-circle"></i>
+                                </span>
+                              </th>
+                              <td>https://nzbfinder.ws/register?ref=1</td>
+                            </tr>
 
-                <ul class="mt-6 list-reset">
-                  <li class="px-3 py-3 border-b" style="padding-top: 0px">
-                    Basic Membership
-                    <span class="float-right"><strong>€10</strong></span>
-                  </li>
-                  <li class="px-3 py-3 border-b">
-                    <span>VAT - NL (21%)</span>
-                    <span class="float-right"><strong>€2.1</strong></span>
-                  </li>
-                  <li class="px-3 py-3">
-                    <span>Total (EUR)</span>
-                    <span class="float-right"><strong>€12.1</strong></span>
-                  </li>
-                </ul>
+                            <tr class="border-b">
+                              <th width="200">Timezone</th>
+                              <td>Europe/Amsterdam</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table
+                          class="table w-full"
+                          cellpadding="10"
+                          cellspacing="1"
+                        >
+                          <tbody>
+                            <tr class="text-white bg-primary">
+                              <td colspan="2">
+                                <strong>API &amp; Downloads</strong>
+                              </td>
+                            </tr>
+                            <tr class="border-b">
+                              <th width="200">
+                                API Hits <small>Last 24h</small>
+                              </th>
+                              <td><span id="uatd">144</span></td>
+                            </tr>
+                            <tr class="border-b">
+                              <th width="200">
+                                Downloads <small>Last 24h</small>
+                              </th>
+                              <td>
+                                <span id="ugrtd">38</span>
+                                / Unlimited
+                                <a
+                                  onclick="resetapireq(1, 'grabs'); document.getElementById('ugrtd').innerHTML='0'; return false;"
+                                  href="#"
+                                  class="px-2 text-sm leading-9 text-white bg-red-500 rounded "
+                                  >Reset</a
+                                >
+                              </td>
+                            </tr>
+                            <tr class="border-b">
+                              <th width="200">Downloads Total</th>
+                              <td>24447</td>
+                            </tr>
+                            <tr class="border-b">
+                              <th width="200">API/RSS Key</th>
+                              <td>
+                                3bc4e94e{REMOVED}
+                                <a
+                                  href="https://nzbfinder.ws/profileedit?action=newapikey"
+                                  class="px-2 text-sm leading-9 text-white bg-red-500 rounded "
+                                  >GENERATE NEW KEY</a
+                                >
+                              </td>
+                            </tr>
+                            <tr class="border-b">
+                              <th width="200">Spotweb API Key</th>
+                              <td>
+                                9b6f60c4{REMOVED}
+                                <a
+                                  href="https://nzbfinder.ws/profileedit?action=newspotwebkey"
+                                  id="new_spotweb_key"
+                                  class="px-2 text-sm leading-9 text-white bg-red-500 rounded "
+                                  >GENERATE NEW KEY</a
+                                >
+                              </td>
+                            </tr>
+                            <tr class="border-b">
+                              <th width="200">Reset Spotweb Password</th>
+                              <td>
+                                <a
+                                  id="new_spotweb_password"
+                                  class="px-2 text-sm leading-9 text-white bg-yellow-500 rounded "
+                                  >CLICK TO RESET SPOTWEB PASSWORD</a
+                                >
+                                <span id="spotwebPassword"></span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="" x-show="activePage === 'payment'">
+                <div class="p-4 wrapper">
+                  <p class="mb-4">
+                    Here you'll find your payment information from your last
+                    payment to NZB Finder. If you have any questions about your
+                    premium account please don't hesitate to contact our staff
+                    using the<br />
+                    <a
+                      href="https://nzbfinder.ws/contact-us"
+                      class="text-blue-500"
+                      >contact form</a
+                    >.
+                  </p>
+
+                  <h4 class="text-lg text-red-800">
+                    Please provide your username and transaction ID when
+                    contacting our staff.
+                  </h4>
+                  <br />
+
+                  <table cellpadding="10" class="table w-full">
+                    <tbody>
+                      <tr class="text-white shadow bg-primary">
+                        <td colspan="2" style="padding-left: 8px">
+                          <strong>Last Payment</strong>
+                        </td>
+                      </tr>
+                      <tr class="odd:bg-gray-100">
+                        <th
+                          width="200"
+                          class="text-lg font-light text-left uppercase"
+                        >
+                          Account Type
+                        </th>
+                        <td>Admin</td>
+                      </tr>
+                      <tr class="odd:bg-gray-100">
+                        <th
+                          width="200"
+                          class="text-lg font-light text-left uppercase"
+                        >
+                          Last Payment
+                        </th>
+                        <td>
+                          2021-01-01 17:04:09 <small>(Year/Month/Day)</small>
+                        </td>
+                      </tr>
+                      <tr class="odd:bg-gray-100">
+                        <th
+                          width="200"
+                          class="text-lg font-light text-left uppercase"
+                        >
+                          Expiration Date
+                        </th>
+                        <td>
+                          2022-10-24 11:52:56 <small>(Year/Month/Day)</small>
+                        </td>
+                      </tr>
+                      <tr class="odd:bg-gray-100">
+                        <th
+                          width="200"
+                          class="text-lg font-light text-left uppercase"
+                        >
+                          Transaction ID
+                        </th>
+                        <td>
+                          tr_HheBux2rDv
+                          <label
+                            class="
+                              px-2
+                              text-white
+                              leading-9
+                              text-sm
+                              bg-[#b066ff]
+                              rounded
+                              mx-2
+                            "
+                          >
+                            Ideal
+                          </label>
+                        </td>
+                      </tr>
+                      <tr class="odd:bg-gray-100">
+                        <th
+                          width="200"
+                          class="text-lg font-light text-left uppercase"
+                        >
+                          Amount
+                        </th>
+                        <td>
+                          €10 (
+                          <small>With tax and fees: €12.10</small>)
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <table class="table w-full" cellpadding="10">
+                    <tbody>
+                      <tr class="text-white shadow bg-primary">
+                        <td colspan="4" style="padding-left: 8px">
+                          <strong>Payment History</strong>
+                        </td>
+                      </tr>
+                      <tr class="odd:bg-gray-100">
+                        <td style="padding-left: 8px">
+                          <strong>Date <small>(Year/Month/Day)</small></strong>
+                        </td>
+                        <td style="padding-left: 8px">
+                          <strong>Payment ID</strong>
+                        </td>
+                        <td style="padding-left: 8px">
+                          <strong>Method</strong>
+                        </td>
+                        <td style="padding-left: 8px">
+                          <strong>Total Amount</strong>
+                        </td>
+                      </tr>
+                      <tr class="odd:bg-gray-100">
+                        <th class="font-normal text-left uppercase">
+                          2021-01-01 17:04:09
+                        </th>
+                        <td>tr_HheBux2rDv</td>
+                        <td>Ideal</td>
+                        <td>
+                          €12.10 &nbsp;
+                          <label
+                            class="px-2 text-sm leading-9 text-white bg-green-500 rounded "
+                            >Refunded</label
+                          >
+                        </td>
+                      </tr>
+                      <tr class="odd:bg-gray-100">
+                        <th class="font-normal text-left uppercase">
+                          2020-10-24 11:52:41
+                        </th>
+                        <td>pi_1HfjQSHf224l2JTUAUJzqRFn</td>
+                        <td>Creditcard</td>
+                        <td>€12.10 &nbsp;</td>
+                      </tr>
+                      <tr class="odd:bg-gray-100">
+                        <th class="font-normal text-left uppercase">
+                          2019-10-25 13:33:46
+                        </th>
+                        <td>pi_1FXR35Hf224l2JTU44JlktIu</td>
+                        <td>Creditcard</td>
+                        <td>€12.10 &nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="px-3 my-3">
+                <a
+                  class="px-3 py-2 leading-8 text-white rounded shadow-sm  bg-primary"
+                  href="https://nzbfinder.ws/profileedit"
+                  >Edit Profile</a
+                >
               </div>
             </div>
           </div>
@@ -1170,7 +1106,6 @@
       </section>
 
       <!-- END MAIN CONTENT -->
-
       <footer>
         <div class="container mx-auto">
           <hr class="w-full my-4 border border-gray-200 dark:border-gray-800" />

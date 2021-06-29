@@ -1829,6 +1829,16 @@ video {
   outline-offset: 2px;
 }
 
+.dark .dark\:odd\:bg-gray-900:nth-child(odd) {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+}
+
+.dark .dark\:odd\:bg-gray-800:nth-child(odd) {
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
+
 .dark .dark\:hover\:border-gray-200:hover {
   --tw-border-opacity: 1;
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
@@ -1937,6 +1947,10 @@ video {
 
   .lg\:p-4 {
     padding: 1rem;
+  }
+
+  .lg\:p-8 {
+    padding: 2rem;
   }
 
   .lg\:px-0 {
