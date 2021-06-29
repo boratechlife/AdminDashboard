@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,16 +8,42 @@
     <link rel="stylesheet" href="tailwind.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <script src="//unpkg.com/alpinejs" defer></script>
+
+    <link
+      href="https://unpkg.com/mobius1-selectr@latest/dist/selectr.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://unpkg.com/mobius1-selectr@latest/dist/selectr.min.js"
+      type="text/javascript"
+    ></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/gh/mobius1/selectr@latest/dist/selectr.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/gh/mobius1/selectr@latest/dist/selectr.min.js"
+      type="text/javascript"
+    ></script>
   </head>
-  <body class="overflow-x-hidden bg-gray-100" x-data="{ SideBarOpen: false }">
-    <header class="fixed top-0 z-50 w-full py-3 bg-dark">
+  <body
+    class="overflow-x-hidden bg-gray-100 dark:bg-gray-800 dark:text-gray-100"
+    x-data="{ SideBarOpen: false }"
+  >
+    <header class="fixed top-0 z-50 w-full bg-dark dark:bg-gray-900">
       <div class="container mx-auto">
         <div class="flex items-center justify-between w-full">
           <div class="flex items-center space-x-4 text-white">
-            <div class="logi">
+            <div class="hidden logo lg:inline-block">
               <img src="images/logo-white.png" alt="" srcset="" />
             </div>
             <div class="px-3 humbergur" @click="SideBarOpen = !SideBarOpen">
@@ -40,155 +66,439 @@
             </div>
             <nav class="px-6">
               <ul class="flex space-x-3">
-                <li class="flex items-center px-2 space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke=""
-                    class="w-5 h-5 stroke-current"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <li
+                  class="relative flex items-center px-4 py-3 space-x-2 cursor-pointer  hover:border-t-2 hover:border-white dark:hover:border-gray-200 dropdown"
+                >
+                  <i class="fa fa-film"></i>
+                  <span class="hidden lg:inline">Movies</span>
+
+                  <span
+                    class="hidden float-right font-light text-gray-300  lg:inline"
+                    ><i class="fa fa-chevron-down"></i
+                  ></span>
+
+                  <div
+                    class="absolute w-40 text-gray-500 bg-white  dark:bg-gray-800 dark:text-gray-300 -left-6 top-10 dropdown-content"
                   >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    ></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                  </svg>
-                  <span>List1</span>
+                    <ul class="w-full py-2">
+                      <li
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/Movies">Movies</a>
+                      </li>
+                      <hr />
+                      <li
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/popular/movies"
+                          >Popular Movies</a
+                        >
+                      </li>
+                      <li
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/mymovies">My Movies</a>
+                      </li>
+                      <hr
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      />
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/Foreign"
+                          >Foreign</a
+                        >
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/SD">SD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/HD">HD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/UHD">UHD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/3D">3D</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/BluRay">BluRay</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/DVD">DVD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/WEBDL">WEBDL</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/X265">X265</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/Other">Other</a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
-                <li class="flex items-center px-2 space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke=""
-                    class="w-5 h-5 stroke-current"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <li
+                  class="relative flex items-center px-4 py-3 space-x-2 cursor-pointer  dropdown hover:border-t-2 hover:border-white"
+                >
+                  <i class="fa fa-music"></i>
+                  <span class="hidden lg:inline">Audio</span>
+
+                  <span
+                    class="hidden float-right font-light text-gray-300  lg:inline"
+                    ><i class="fa fa-chevron-down"></i
+                  ></span>
+
+                  <div
+                    class="absolute w-40 text-gray-500 bg-white  dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
                   >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    ></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                  </svg>
-                  <span>List1</span>
+                    <ul class="w-full py-2">
+                      <li
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/Movies">Audio</a>
+                      </li>
+
+                      <hr
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      />
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/Foreign">MP3</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/SD">Video</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/HD">AudioBook</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/UHD">LossLess</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/3D">Foreign</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/BluRay">Other</a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
-                <li class="flex items-center px-2 space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke=""
-                    class="w-5 h-5 stroke-current"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+
+                <li
+                  class="relative flex items-center px-4 py-3 space-x-2 cursor-pointer  hover:border-t-2 dropdown hover:border-white"
+                >
+                  <i class="fa fa-desktop"></i>
+                  <span class="hidden lg:inline">TV</span>
+
+                  <span
+                    class="hidden float-right font-light text-gray-300  lg:inline"
+                    ><i class="fa fa-chevron-down"></i
+                  ></span>
+
+                  <div
+                    class="absolute w-40 text-gray-500 bg-white  dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
                   >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    ></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                  </svg>
-                  <span>List1</span>
+                    <ul class="w-full py-2">
+                      <li
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/Movies">TV</a>
+                      </li>
+                      <hr />
+                      <li
+                        class="px-2 py-1 my-2 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/popular/movies"
+                          >Popular TV
+                        </a>
+                      </li>
+                      <li
+                        class="px-2 py-1 my-2 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/mymovies">TV series</a>
+                      </li>
+
+                      <li
+                        class="px-2 py-1 my-2 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/mymovies">My Shows</a>
+                      </li>
+                      <hr
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      />
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/Foreign">WEB-DL</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/SD">Foreign</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/HD">SD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/HD">HD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/UHD">UHD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/3D">Sport</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/BluRay">Anime</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/DVD"
+                          >Documentary</a
+                        >
+                      </li>
+
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/X265">X265</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/Other">Other</a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
-                <li class="flex items-center px-2 space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke=""
-                    class="w-5 h-5 stroke-current"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <li
+                  class="relative flex items-center px-4 py-3 space-x-2 cursor-pointer  hover:border-t-2 dropdown hover:border-white"
+                >
+                  <i class="fa fa-ban"></i>
+                  <span class="hidden lg:inline">Adult</span>
+
+                  <span
+                    class="hidden float-right font-light text-gray-300  lg:inline"
+                    ><i class="fa fa-chevron-down"></i
+                  ></span>
+
+                  <div
+                    class="absolute w-40 text-gray-500 bg-white  dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
                   >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    ></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                  </svg>
-                  <span>List1</span>
+                    <ul class="w-full py-2">
+                      <li
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/Movies">XXX</a>
+                      </li>
+                      <hr />
+                      <li
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/popular/movies"
+                          >Popular XXX</a
+                        >
+                      </li>
+
+                      <hr
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      />
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/Foreign">DVD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/SD">WMV</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/HD">XviD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/UHD">x264</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/3D">HD clips</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/BluRay"
+                          >SD clips</a
+                        >
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/DVD">UHD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/WEBDL">Imageset</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/X265">Packs</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/Other">SD</a>
+                      </li>
+
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/Other">WEBDL</a>
+                      </li>
+
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/Other">Other</a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
-                <li class="flex items-center px-2 space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke=""
-                    class="w-5 h-5 stroke-current"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+
+                <li
+                  class="relative flex items-center px-4 py-3 space-x-2 cursor-pointer  hover:border-t-2 dropdown hover:border-white"
+                >
+                  <i class="fa fa-book"></i>
+                  <span class="hidden lg:inline">Books</span>
+                  <span
+                    class="hidden float-right font-light text-gray-300  lg:inline"
+                    ><i class="fa fa-chevron-down"></i
+                  ></span>
+
+                  <div
+                    class="absolute w-40 text-gray-500 bg-white  dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
                   >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    ></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                  </svg>
-                  <span>List1</span>
+                    <ul class="w-full py-2">
+                      <li
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/Movies">Books</a>
+                      </li>
+                      <hr />
+
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/Foreign"
+                          >Magazines</a
+                        >
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/SD">Ebook</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/HD">Comics</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/UHD">Technical</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/3D">Foreign</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/BluRay">Other</a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
-                <li class="flex items-center px-2 space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke=""
-                    class="w-5 h-5 stroke-current"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+
+                <li
+                  class="relative flex items-center px-4 py-3 space-x-2 cursor-pointer  dropdown hover:border-t-2 hover:border-white"
+                >
+                  <i class="fa fa-bolt"></i>
+                  <span class="hidden lg:inline">Misc</span>
+                  <span
+                    class="hidden float-right font-light text-gray-300  lg:inline"
+                    ><i class="fa fa-chevron-down"></i
+                  ></span>
+
+                  <div
+                    class="absolute w-40 text-gray-500 bg-white  dark:text-gray-300 -left-6 top-10 dropdown-content dark:bg-gray-800"
                   >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    ></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                  </svg>
-                  <span>List1</span>
+                    <ul class="w-full py-2">
+                      <li
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/Movies">Movies</a>
+                      </li>
+                      <hr />
+                      <li
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/popular/movies"
+                          >Popular Movies</a
+                        >
+                      </li>
+                      <li
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      >
+                        <a href="https://nzbfinder.ws/mymovies">My Movies</a>
+                      </li>
+                      <hr
+                        class="px-2 py-1 my-4 hover:bg-primary hover:text-white"
+                      />
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/Foreign"
+                          >Foreign</a
+                        >
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/SD">SD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/HD">HD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/UHD">UHD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/3D">3D</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/BluRay">BluRay</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/DVD">DVD</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/WEBDL">WEBDL</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/X265">X265</a>
+                      </li>
+                      <li class="px-2 py-2 hover:text-white hover:bg-primary">
+                        <a href="https://nzbfinder.ws/Movies/Other">Other</a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
               </ul>
             </nav>
           </div>
           <div
-            class="
-              relative
-              flex
-              items-center
-              px-2
-              space-x-2
-              userprofile
-              dropdown
-            "
+            class="relative flex items-center px-2 space-x-2 cursor-pointer  userprofile dropdown"
           >
+            <div class="w-10 h-10 bg-gray-200 rounded-full">
+              <img
+                src="./images/avatar.png"
+                alt=""
+                class="w-10 h-10 rounded-full"
+              />
+            </div>
+            <p class="text-white">Hi, Bento</p>
+
             <div
-              class="
-                absolute
-                z-40
-                w-64
-                h-64
-                bg-white
-                -left-20
-                top-10
-                dropdown-content
-                drop-shadow-sm
-              "
-            ></div>
-            <div class="w-10 h-10 bg-gray-200 rounded-full"></div>
-            <p class="text-white">Hi, DENIS</p>
+              class="absolute z-40 w-64 h-64 rounded  bg-dark -left-20 top-10 dropdown-content dark:bg-gray-800 drop-shadow-sm"
+            >
+              <div
+                class="relative flex items-center justify-center w-full h-full"
+              >
+                <ul class="flex flex-col w-full space-y-5 text-gray-600">
+                  <li class="hover:text-white">
+                    <a href="https://nzbfinder.ws/profile"
+                      ><i class="mr-2 fa fa-user"></i><span>My Profile</span></a
+                    >
+                  </li>
+                  <li class="hover:text-white">
+                    <a href="https://nzbfinder.ws/cart/index"
+                      ><i class="mr-2 fa fa-shopping-cart"></i
+                      ><span>My Cart</span></a
+                    >
+                  </li>
+                  <li class="hover:text-white">
+                    <a href="https://nzbfinder.ws/profileedit"
+                      ><i class="mr-2 fa fa-cogs"></i
+                      ><span>Account Settings</span></a
+                    >
+                  </li>
+                  <li class="hover:text-white">
+                    <a href="https://nzbfinder.ws/logout"
+                      ><i class="mr-2 fa fa-sign-out"></i><span>Logout</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -202,20 +512,23 @@
         top-auto
         z-50
         h-screen
-        -mt-5
+        mt-[3.0rem]
         overflow-y-scroll
         transition-all
         duration-300
         bg-white
+        dark:bg-gray-800
         sidebar
       "
     >
       <div x-show="SideBarOpen" class="py-3 content">
         <!-- SEARCH -->
-        <div class="relative px-3 my-2 border rounded shadow-sm">
+        <div
+          class="relative w-11/12 px-3 mx-auto my-2 border rounded shadow-sm"
+        >
           <input
             type="search"
-            class="p-3 border-0 bg-purple-white"
+            class="p-3 border-0  bg-purple-white dark:text-gray-200 dark:bg-gray-900 dark:outline-none"
             placeholder="Search by name..."
           />
           <div class="absolute mt-3 mr-4 top-1 right-2 text-purple-lighter">
@@ -242,17 +555,8 @@
 
         <div class="flex px-3 my-2 space-x-2">
           <select
-            id="-select"
-            class="
-              w-full
-              px-3
-              py-2
-              leading-9
-              border border-gray-100
-              shadow-sm
-              outline-none
-              caret-black
-            "
+            id="select-id"
+            class="w-full px-3 py-2 leading-9 border border-gray-100 shadow-sm outline-none  dark:bg-gray-900 caret-black"
           >
             <option class="leading-9">All</option>
 
@@ -264,7 +568,7 @@
           </select>
 
           <button
-            class="px-4 py-1 text-sm leading-9 text-white bg-black rounded"
+            class="px-4 py-1 text-sm leading-9 text-white bg-black rounded  dark:bg-primary"
           >
             Go
           </button>
@@ -281,20 +585,11 @@
           </div>
 
           <div class="flex flex-col">
-            <h4 class="mb-3 text-xl font-bold text-gray-600">Bento Admin</h4>
+            <h4 class="mb-3 text-xl font-bold text-gray-600 dark:text-gray-400">
+              Bento Admin
+            </h4>
             <div
-              class="
-                flex
-                items-center
-                w-11/12
-                px-4
-                py-1
-                space-x-2
-                text-sm
-                border border-gray-100
-                badge
-                rounded-2xl
-              "
+              class="flex items-center w-11/12 px-4 py-1 space-x-2 text-sm border border-gray-100  badge rounded-2xl"
             >
               <div class="inline text-green-500 rounded-full">
                 <svg
@@ -311,315 +606,143 @@
                   <circle cx="12" cy="12" r="10"></circle>
                 </svg>
               </div>
-              <p class="inline">Admin</p>
+              <p class="inline dark:text-gray-200">Admin</p>
             </div>
           </div>
         </div>
-        <hr class="my-3 border-b border-gray-100" />
+        <hr class="my-3 border-b border-gray-100 dark:border-gray-500" />
         <!-- NAVIGATION LINKS -->
-        <nav class="px-3">
-          <div class="text-sm nav">
-            <h4 class="mb-2 text-base font-normal text-gray-600 uppercase">
+        <nav class="w-full px-3">
+          <div class="w-full text-sm nav">
+            <h4
+              class="mb-2 text-base font-normal text-gray-600 uppercase  dark:text-gray-400"
+            >
               Navigation
             </h4>
-            <ul class="divide-y">
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
-              </li>
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
+            <ul class="w-full divide-y dark:divide-gray-600">
+              <li
+                class="flex items-center w-full py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="text-lg fa fa-home"></i>
+
                 <p>Home</p>
               </li>
 
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-search"></i>
+
+                <p>Advanced Search</p>
               </li>
 
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-fire"></i>
+
+                <p>Popular Downloads</p>
+              </li>
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-gift"></i>
+
+                <p>Premium Service</p>
               </li>
 
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-globe"></i>
+
+                <p>Spotweb</p>
+              </li>
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-server"></i>
+
+                <p>Anonymous VPN</p>
               </li>
 
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-list"></i>
+
+                <p>Browse Groups</p>
+              </li>
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-shopping-cart"></i>
+
+                <p>Cart</p>
               </li>
 
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-envelope"></i>
+
+                <p>Contact</p>
+              </li>
+
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-flag"></i>
+
+                <p>Reports</p>
+              </li>
+
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-cogs"></i>
+
+                <p>Admin</p>
               </li>
             </ul>
           </div>
 
-          <div class="mt-6 text-sm nav">
-            <h4 class="mb-2 text-base font-normal text-gray-600 uppercase">
+          <div class="mt-6 mb-16 text-sm nav">
+            <h4
+              class="mb-2 text-base font-normal text-gray-600 uppercase  dark:text-gray-400"
+            >
               Article and Link
             </h4>
-            <ul class="divide-y">
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+            <ul class="divide-y dark:divide-gray-500">
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-cloud"></i>
+
+                <p>API</p>
               </li>
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-rss"></i>
+
+                <p>RSS Feeds</p>
               </li>
 
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-cog" aria-hidden="true"></i>
+
+                <p>Software Configuration</p>
               </li>
 
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
-              </li>
+              <li
+                class="flex items-center py-1 space-x-2 leading-10 cursor-pointer  hover:text-gray-500 dark:hover:text-gray-200 dark:text-gray-300"
+              >
+                <i class="fa fa-question-circle"></i>
 
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
-              </li>
-
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
-              </li>
-
-              <li class="flex items-center py-1 space-x-2 leading-10">
-                <div class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    class="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                    <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                  </svg>
-                </div>
-                <p>Home</p>
+                <p>FAQ</p>
               </li>
             </ul>
           </div>
@@ -627,22 +750,42 @@
       </div>
     </div>
     <main
-      x-bind:class="SideBarOpen ? 'ml-64' : 'ml-0'"
-      class="relative mt-[4.8rem] transition-all duration-300 bg-gray-100"
+      x-bind:class="SideBarOpen ? 'lg:ml-64' : 'lg:ml-0'"
+      class="
+        relative
+        pt-[4.3rem]
+        px-4
+        lg:px-0
+        transition-all
+        duration-300
+        bg-gray-100
+        dark:bg-gray-800
+      "
     >
-      <section>
-        <div class="container mx-auto">
-          <div class="flex justify-between py-2 my-6 text-4xl font-bold">
-            <div>NZBFinder.ws ></div>
-            <div class="text-xl font-bold text-blue-500">Home</div>
+      <section class="mt-0">
+        <div class="container pr-3 mx-auto">
+          <div
+            class="flex justify-between py-2 my-6 text-2xl font-bold  lg:text-4xl"
+          >
+            <div>
+              <span class="font-light text-gray-800 dark:text-gray-200"
+                >NZBFinder.ws ></span
+              >
+
+              <span class="dark:text-gray-100">Home</span>
+            </div>
+            <div class="hidden text-xl font-bold text-blue-500 lg:block">
+              Home
+            </div>
           </div>
         </div>
       </section>
 
       <!-- MAIN CONTENT -->
+      <!-- MAIN CONTENT -->
       <section class="main-content section">
         <div
-          class="container p-8 mx-auto mb-6 bg-white shadow-sm drop-shadow-md"
+          class="container p-8 mx-auto mb-6 bg-white shadow-sm  dark:bg-gray-900 drop-shadow-md"
         >
           <h3
             class="mb-4 text-2xl font-light uppercase"
@@ -670,10 +813,10 @@
           <form
             accept-charset="UTF-8"
             name="browseby"
-            class="flex w-10/12 mt-4 space-x-2"
+            class="flex flex-col w-full mt-4 space-y-4  lg:w-10/12 lg:flex-row lg:spce-y-0 lg:space-x-2"
           >
             <input
-              class="w-auto px-3 py-1 leading-10 bg-gray-100"
+              class="w-auto px-3 py-1 leading-10 bg-gray-100 dark:bg-gray-800"
               id="musicartist"
               type="text"
               name="artist"
@@ -681,7 +824,7 @@
               placeholder="Artist"
             />
             <input
-              class="w-auto px-3 py-1 leading-10 bg-gray-100"
+              class="w-auto px-3 py-1 leading-10 bg-gray-100 dark:bg-gray-800"
               id="musictitle"
               type="text"
               name="title"
@@ -689,14 +832,7 @@
               placeholder="Title"
             />
             <select
-              class="
-                w-auto
-                px-3
-                py-1
-                leading-10
-                bg-gray-100
-                select2-render select2-hidden-accessible
-              "
+              class="w-auto px-3 py-2 leading-10 bg-gray-100  dark:bg-gray-800 select2-render select2-hidden-accessible"
               id="genre"
               name="genre"
               data-select2-id="select2-data-genre"
@@ -845,14 +981,7 @@
             </select>
 
             <select
-              class="
-                w-auto
-                px-3
-                py-1
-                leading-10
-                bg-gray-100
-                select2-render select2-hidden-accessible
-              "
+              class="w-auto px-3 py-2 leading-10 bg-gray-100  dark:bg-gray-800 select2-render select2-hidden-accessible"
               id="year"
               name="year"
               data-select2-id="select2-data-year"
@@ -942,15 +1071,7 @@
             </select>
 
             <select
-              class="
-                w-auto
-                px-3
-                py-1
-                leading-10
-                bg-gray-100
-                rounded
-                select2-render select2-hidden-accessible
-              "
+              class="w-auto px-3 py-2 leading-10 bg-gray-100 rounded  dark:bg-gray-800 select2-render select2-hidden-accessible"
               id="category"
               name="t"
               data-select2-id="select2-data-category"
@@ -973,7 +1094,7 @@
             </select>
             <div>
               <input
-                class="px-3 py-2 leading-10 text-white bg-green-500 rounded"
+                class="w-full px-3 py-2 leading-10 text-white bg-green-500 rounded  lg:w-auto"
                 type="submit"
                 value="Search"
               />
@@ -981,7 +1102,9 @@
           </form>
         </div>
 
-        <div class="container p-8 mx-auto bg-white shadow-sm drop-shadow-md">
+        <div
+          class="container p-8 mx-auto bg-white shadow-sm  dark:bg-gray-900 drop-shadow-md"
+        >
           <div
             class="
               w-full
@@ -1007,20 +1130,11 @@
             </form>
           </div>
 
-          <div class="flex justify-end w-full">
-            <nav class="flex justify-end w-full my-4 lg:w-2/3">
-              <ul class="flex">
+          <div class="flex flex-wrap justify-end w-full">
+            <nav class="flex flex-wrap justify-end w-full my-4 lg:w-2/3">
+              <ul class="flex flex-wrap">
                 <li
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    w-10
-                    h-10
-                    text-sm
-                    bg-gray-100
-                    hover:bg-primary hover:text-white
-                  "
+                  class="flex items-center justify-center w-10 h-10 text-sm bg-gray-100 cursor-pointer  dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1028,7 +1142,7 @@
                     height="17"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#000000"
+                    class="stroke-current"
                     stroke-width="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1038,165 +1152,66 @@
                 </li>
 
                 <li
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    w-10
-                    h-10
-                    text-sm
-                    bg-gray-100
-                    hover:bg-primary hover:text-white
-                  "
+                  class="flex items-center justify-center w-10 h-10 text-sm bg-gray-100 cursor-pointer  dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white"
                 >
                   1
                 </li>
 
                 <li
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    w-10
-                    h-10
-                    text-sm
-                    bg-gray-100
-                    hover:bg-primary hover:text-white
-                  "
+                  class="flex items-center justify-center w-10 h-10 text-sm bg-gray-100 cursor-pointer  dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white"
                 >
                   2
                 </li>
                 <li
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    w-10
-                    h-10
-                    text-sm
-                    bg-gray-100
-                    hover:bg-primary hover:text-white
-                  "
+                  class="flex items-center justify-center w-10 h-10 text-sm bg-gray-100 cursor-pointer  dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white"
                 >
                   3
                 </li>
 
                 <li
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    w-10
-                    h-10
-                    text-sm
-                    bg-gray-100
-                    hover:bg-primary hover:text-white
-                  "
+                  class="flex items-center justify-center w-10 h-10 text-sm bg-gray-100 cursor-pointer  dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white"
                 >
                   4
                 </li>
 
                 <li
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    w-10
-                    h-10
-                    text-sm
-                    bg-gray-100
-                    hover:bg-primary hover:text-white
-                  "
+                  class="flex items-center justify-center w-10 h-10 text-sm bg-gray-100 cursor-pointer  dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white"
                 >
                   5
                 </li>
 
                 <li
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    w-10
-                    h-10
-                    text-sm
-                    bg-gray-100
-                    hover:bg-primary hover:text-white
-                  "
+                  class="flex items-center justify-center w-10 h-10 text-sm bg-gray-100 cursor-pointer  dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white"
                 >
                   6
                 </li>
 
                 <li
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    w-10
-                    h-10
-                    text-sm
-                    bg-gray-100
-                    hover:bg-primary hover:text-white
-                  "
+                  class="flex items-center justify-center w-10 h-10 text-sm bg-gray-100 cursor-pointer  dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white"
                 >
                   7
                 </li>
 
                 <li
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    w-10
-                    h-10
-                    text-sm
-                    bg-gray-100
-                    hover:bg-primary hover:text-white
-                  "
+                  class="flex items-center justify-center w-10 h-10 text-sm bg-gray-100 cursor-pointer  dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white"
                 >
                   8
                 </li>
 
                 <li
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    w-10
-                    h-10
-                    text-sm
-                    bg-gray-100
-                    hover:bg-primary hover:text-white
-                  "
+                  class="flex items-center justify-center w-10 h-10 text-sm bg-gray-100 cursor-pointer  dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white"
                 >
                   9
                 </li>
 
                 <li
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    w-10
-                    h-10
-                    text-sm
-                    bg-gray-100
-                    hover:bg-primary hover:text-white
-                  "
+                  class="flex items-center justify-center w-10 h-10 text-sm bg-gray-100 cursor-pointer  dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white"
                 >
                   10
                 </li>
 
                 <li
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    w-10
-                    h-10
-                    text-sm
-                    bg-gray-100
-                    hover:bg-primary hover:text-white
-                  "
+                  class="flex items-center justify-center w-10 h-10 text-sm bg-gray-100 cursor-pointer  dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1204,7 +1219,7 @@
                     height="17"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#000000"
+                    class="stroke-current"
                     stroke-width="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1217,17 +1232,9 @@
           </div>
           <div class="w-full my-4 space-y-4">
             <div
-              class="
-                flex flex-wrap
-                p-2
-                py-6
-                border
-                shadow
-                border-gray-50 border-t-gray-100
-                item
-              "
+              class="flex flex-wrap p-2 py-6 border shadow  dark:border-gray-700 border-gray-50 border-t-gray-200 dark:border-t-gray-600 item"
             >
-              <div class="w-2/12 pl-4">
+              <div class="w-full pl-4 lg:w-2/12">
                 <a
                   title="View details"
                   href="https://nzbfinder.ws/details/efc5f413-65f3-4444-8d9a-209e5ba801ed"
@@ -1241,7 +1248,7 @@
                   />
                 </a>
                 <a
-                  class="px-2 py-1 mx-1 text-sm leading-10 bg-gray-200 rounded"
+                  class="px-2 py-1 mx-1 text-sm leading-10 bg-gray-200 rounded  dark:bg-gray-800"
                   target="_blank"
                   href="http://dereferer.org/?https://music.apple.com/us/album/the-underrated-youth-ep/1480624271?uo=4"
                   name="amazon99198"
@@ -1250,14 +1257,16 @@
                   Amazon</a
                 >
                 <a
-                  class="px-2 py-1 mx-1 text-sm leading-10 bg-gray-200 rounded"
+                  class="px-2 py-1 mx-1 text-sm leading-10 bg-gray-200 rounded  dark:bg-gray-800"
                   href="https://nzbfinder.ws/browse/group?g=alt.binaries.sounds.music"
                   title="Browse releases in a.b.sounds.music"
                   >Group</a
                 >
               </div>
-              <div class="w-10/12 pl-4">
-                <h4 class="pb-3 text-xl text-blue-500 border-b border-gray-100">
+              <div class="w-full pl-4 lg:w-10/12">
+                <h4
+                  class="pb-3 text-xl text-blue-500 border-b border-gray-100  dark:border-gray-600"
+                >
                   <a
                     title="View details"
                     href="https://nzbfinder.ws/details/efc5f413-65f3-4444-8d9a-209e5ba801ed"
@@ -1272,19 +1281,15 @@
                 </h4>
                 <table
                   cellpadding="10"
-                  class="
-                    table
-                    w-full
-                    table-striped
-                    responsive-utilities
-                    jambo-table
-                  "
+                  class="table w-full  table-striped responsive-utilities jambo-table"
                 >
                   <tbody>
                     <tr>
                       <td id="guidefc5f413-65f3-4444-8d9a-209e5ba801ed">
-                        <span class="px-2 text-sm bg-gray-200">23.21Mb</span>
-                        <span class="px-2 text-sm bg-gray-200"
+                        <span class="px-2 text-sm bg-gray-200 dark:bg-gray-800"
+                          >23.21Mb</span
+                        >
+                        <span class="px-2 text-sm bg-gray-200 dark:bg-gray-800"
                           >Posted 57 Mins ago</span
                         >
                         <a
@@ -1310,15 +1315,7 @@
                         <div class="my-2">
                           <a
                             role="button"
-                            class="
-                              px-2
-                              py-1
-                              text-sm text-white
-                              rounded
-                              shadow
-                              bg-light-blue
-                              drop-shadow-sm
-                            "
+                            class="px-2 py-1 text-sm text-white rounded shadow  bg-light-blue drop-shadow-sm"
                             data-toggle="tooltip"
                             data-placement="top"
                             title=""
@@ -1333,25 +1330,13 @@
                             href="https://nzbfinder.ws/details/efc5f413-65f3-4444-8d9a-209e5ba801ed/#comments"
                             ><i class="fa fa-comment-o"></i
                             ><span
-                              class="
-                                px-2
-                                py-1
-                                text-sm text-white
-                                rounded
-                                bg-light-blue
-                              "
+                              class="px-2 py-1 text-sm text-white rounded  bg-light-blue"
                             >
                               0 Comments</span
                             ></a
                           >
                           <span
-                            class="
-                              px-2
-                              py-1
-                              text-sm text-white
-                              rounded
-                              bg-light-blue
-                            "
+                            class="px-2 py-1 text-sm text-white rounded  bg-light-blue"
                             id="guidefc5f413-65f3-4444-8d9a-209e5ba801ed"
                             data-toggle="tooltip"
                             data-placement="top"
@@ -1368,17 +1353,9 @@
             </div>
 
             <div
-              class="
-                flex flex-wrap
-                p-2
-                py-6
-                border
-                shadow
-                border-gray-50 border-t-gray-100
-                item
-              "
+              class="flex flex-wrap p-2 py-6 border shadow  dark:border-gray-700 border-gray-50 border-t-gray-200 dark:border-t-gray-600 item"
             >
-              <div class="w-2/12 pl-4">
+              <div class="w-full pl-4 lg:w-2/12">
                 <a
                   title="View details"
                   href="https://nzbfinder.ws/details/efc5f413-65f3-4444-8d9a-209e5ba801ed"
@@ -1392,7 +1369,7 @@
                   />
                 </a>
                 <a
-                  class="px-2 py-1 mx-1 text-sm leading-10 bg-gray-200 rounded"
+                  class="px-2 py-1 mx-1 text-sm leading-10 bg-gray-200 rounded  dark:bg-gray-800"
                   target="_blank"
                   href="http://dereferer.org/?https://music.apple.com/us/album/the-underrated-youth-ep/1480624271?uo=4"
                   name="amazon99198"
@@ -1401,14 +1378,16 @@
                   Amazon</a
                 >
                 <a
-                  class="px-2 py-1 mx-1 text-sm leading-10 bg-gray-200 rounded"
+                  class="px-2 py-1 mx-1 text-sm leading-10 bg-gray-200 rounded  dark:bg-gray-800"
                   href="https://nzbfinder.ws/browse/group?g=alt.binaries.sounds.music"
                   title="Browse releases in a.b.sounds.music"
                   >Group</a
                 >
               </div>
-              <div class="w-10/12 pl-4">
-                <h4 class="pb-3 text-xl text-blue-500 border-b border-gray-100">
+              <div class="w-full pl-4 lg:w-10/12">
+                <h4
+                  class="pb-3 text-xl text-blue-500 border-b border-gray-100  dark:border-gray-600"
+                >
                   <a
                     title="View details"
                     href="https://nzbfinder.ws/details/efc5f413-65f3-4444-8d9a-209e5ba801ed"
@@ -1423,19 +1402,15 @@
                 </h4>
                 <table
                   cellpadding="10"
-                  class="
-                    table
-                    w-full
-                    table-striped
-                    responsive-utilities
-                    jambo-table
-                  "
+                  class="table w-full  table-striped responsive-utilities jambo-table"
                 >
                   <tbody>
                     <tr>
                       <td id="guidefc5f413-65f3-4444-8d9a-209e5ba801ed">
-                        <span class="px-2 text-sm bg-gray-200">23.21Mb</span>
-                        <span class="px-2 text-sm bg-gray-200"
+                        <span class="px-2 text-sm bg-gray-200 dark:bg-gray-800"
+                          >23.21Mb</span
+                        >
+                        <span class="px-2 text-sm bg-gray-200 dark:bg-gray-800"
                           >Posted 57 Mins ago</span
                         >
                         <a
@@ -1461,15 +1436,7 @@
                         <div class="my-2">
                           <a
                             role="button"
-                            class="
-                              px-2
-                              py-1
-                              text-sm text-white
-                              rounded
-                              shadow
-                              bg-light-blue
-                              drop-shadow-sm
-                            "
+                            class="px-2 py-1 text-sm text-white rounded shadow  bg-light-blue drop-shadow-sm"
                             data-toggle="tooltip"
                             data-placement="top"
                             title=""
@@ -1484,25 +1451,134 @@
                             href="https://nzbfinder.ws/details/efc5f413-65f3-4444-8d9a-209e5ba801ed/#comments"
                             ><i class="fa fa-comment-o"></i
                             ><span
-                              class="
-                                px-2
-                                py-1
-                                text-sm text-white
-                                rounded
-                                bg-light-blue
-                              "
+                              class="px-2 py-1 text-sm text-white rounded  bg-light-blue"
                             >
                               0 Comments</span
                             ></a
                           >
                           <span
-                            class="
-                              px-2
-                              py-1
-                              text-sm text-white
-                              rounded
-                              bg-light-blue
-                            "
+                            class="px-2 py-1 text-sm text-white rounded  bg-light-blue"
+                            id="guidefc5f413-65f3-4444-8d9a-209e5ba801ed"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title=""
+                            data-original-title="Send to my download basket"
+                            ><i class="fa fa-shopping-basket"></i
+                          ></span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-wrap p-2 py-6 border shadow  dark:border-gray-700 border-gray-50 border-t-gray-200 dark:border-t-gray-600 item"
+            >
+              <div class="w-full pl-4 lg:w-2/12">
+                <a
+                  title="View details"
+                  href="https://nzbfinder.ws/details/efc5f413-65f3-4444-8d9a-209e5ba801ed"
+                >
+                  <img
+                    src="https://nzbfinder.ws/covers/music/99198.jpg"
+                    class="rounded img-fluid"
+                    width="140"
+                    border="0"
+                    alt="YUNGBLUD - the underrated youth - EP"
+                  />
+                </a>
+                <a
+                  class="px-2 py-1 mx-1 text-sm leading-10 bg-gray-200 rounded  dark:bg-gray-800"
+                  target="_blank"
+                  href="http://dereferer.org/?https://music.apple.com/us/album/the-underrated-youth-ep/1480624271?uo=4"
+                  name="amazon99198"
+                  title="View Amazon/iTunes page"
+                >
+                  Amazon</a
+                >
+                <a
+                  class="px-2 py-1 mx-1 text-sm leading-10 bg-gray-200 rounded  dark:bg-gray-800"
+                  href="https://nzbfinder.ws/browse/group?g=alt.binaries.sounds.music"
+                  title="Browse releases in a.b.sounds.music"
+                  >Group</a
+                >
+              </div>
+              <div class="w-full pl-4 lg:w-10/12">
+                <h4
+                  class="pb-3 text-xl text-blue-500 border-b border-gray-100  dark:border-gray-600"
+                >
+                  <a
+                    title="View details"
+                    href="https://nzbfinder.ws/details/efc5f413-65f3-4444-8d9a-209e5ba801ed"
+                    >YUNGBLUD - the underrated youth - EP</a
+                  >
+                  (<a
+                    class="title"
+                    title="2019"
+                    href="https://nzbfinder.ws/music?year=2019"
+                    >2019</a
+                  >)
+                </h4>
+                <table
+                  cellpadding="10"
+                  class="table w-full  table-striped responsive-utilities jambo-table"
+                >
+                  <tbody>
+                    <tr>
+                      <td id="guidefc5f413-65f3-4444-8d9a-209e5ba801ed">
+                        <span class="px-2 text-sm bg-gray-200 dark:bg-gray-800"
+                          >23.21Mb</span
+                        >
+                        <span class="px-2 text-sm bg-gray-200 dark:bg-gray-800"
+                          >Posted 57 Mins ago</span
+                        >
+                        <a
+                          class="px-2 text-sm bg-[#ff9122] text-white"
+                          href="https://nzbfinder.ws/admin/release-edit?id=efc5f413-65f3-4444-8d9a-209e5ba801ed"
+                          title="Edit release"
+                        >
+                          Edit</a
+                        >
+                        <br />
+                        <b class="font-semibold">Genre:</b>
+                        <a href="https://nzbfinder.ws/music?genre=1000021"
+                          >Alternative</a
+                        >
+                        <br />
+                        <b class="font-semibold">Publisher:</b>
+                        ℗ 2019 Locomotion Recordings Limited, under exclusive
+                        license to Geffen Records
+                        <br />
+                        <b class="font-semibold">Released:</b>
+                        Oct 18, 2019
+                        <br />
+                        <div class="my-2">
+                          <a
+                            role="button"
+                            class="px-2 py-1 text-sm text-white rounded shadow  bg-light-blue drop-shadow-sm"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title=""
+                            data-original-title="Download NZB"
+                            href="https://nzbfinder.ws/getnzb?id=efc5f413-65f3-4444-8d9a-209e5ba801ed"
+                            ><i class="fa fa-cloud-download"></i
+                            ><span class=""> 9 Grabs</span></a
+                          >
+                          <a
+                            role="button"
+                            class="btn btn-white btn-xs"
+                            href="https://nzbfinder.ws/details/efc5f413-65f3-4444-8d9a-209e5ba801ed/#comments"
+                            ><i class="fa fa-comment-o"></i
+                            ><span
+                              class="px-2 py-1 text-sm text-white rounded  bg-light-blue"
+                            >
+                              0 Comments</span
+                            ></a
+                          >
+                          <span
+                            class="px-2 py-1 text-sm text-white rounded  bg-light-blue"
                             id="guidefc5f413-65f3-4444-8d9a-209e5ba801ed"
                             data-toggle="tooltip"
                             data-placement="top"
@@ -1520,24 +1596,17 @@
           </div>
         </div>
       </section>
-
       <!-- END MAIN CONTENT -->
       <footer>
         <div class="container mx-auto">
-          <hr class="w-full my-4 border border-gray-200" />
-          <div class="flex justify-between py-3 mb-5">
-            <p class="text-xs">
+          <hr class="w-full my-4 border border-gray-200 dark:border-gray-800" />
+          <div class="flex flex-wrap justify-between py-3 mb-5">
+            <p class="text-xs dark:text-gray-400">
               Copyright © 2021 NZB Finder. All rights reserved.
             </p>
 
             <ul
-              class="
-                flex
-                items-center
-                space-x-3
-                text-sm
-                divide-x-2 divide-gray-500
-              "
+              class="flex items-center justify-end w-full my-4 space-x-3 text-sm divide-x-2 divide-gray-500  lg:w-auto lg:my-0"
             >
               <li class="px-3 text-blue-500">Home</li>
               <li class="px-3 text-blue-500">Terms of Use</li>
@@ -1546,5 +1615,9 @@
         </div>
       </footer>
     </main>
+
+    <script>
+      new Selectr("#select-id")
+    </script>
   </body>
 </html>
