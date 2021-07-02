@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <script>
+            /* <![CDATA[ */
+            var SERVERROOT = "https://nzbfinder.ws";
+            var UID = "1";
+            var RSSTOKEN = "3bc4e94ef14337e4e2b490a3897c48f6";
+            /* ]]> */
+        </script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="description" content="NZBFinder.ws is a Usenet indexing and search engine with a lightning fast UI & API.">
+        <meta name="author" content="NZBFinder.ws">
+        <meta name="version" content="v4">
+        <meta name="csrf-token" content="FGFNjjMc24ZVEHzPmPF3RS89ZFeJIuoAoSvPC8aD">
+        <link rel="shortcut icon" type="image/ico" href="https://nzbfinder.ws/assets/nzbfinder-theme/images/appicons/favicon-32x32.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="https://nzbfinder.ws/assets/nzbfinder-theme/images/appicons/apple-touch-icon-60x60.png"
+        <link rel="apple-touch-icon" sizes="76x76" href="https://nzbfinder.ws/assets/nzbfinder-theme/images/appicons/apple-touch-icon-76x76.png"
+        <link rel="apple-touch-icon" sizes="120x120" href="https://nzbfinder.ws/assets/nzbfinder-theme/images/appicons/apple-touch-icon-120x120.png"
+        <link rel="apple-touch-icon" sizes="152x152" href="https://nzbfinder.ws/assets/nzbfinder-theme/images/appicons/apple-touch-icon-152x152.png"
+        <link rel="apple-touch-icon" sizes="180x180" href="https://nzbfinder.ws/assets/nzbfinder-theme/images/appicons/apple-touch-icon-180x180.png"
+        <link rel="icon" type="image/png" sizes="32x32" href="https://nzbfinder.ws/assets/nzbfinder-theme/images/appicons/favicon-32x32.png"
+        <link rel="icon" type="image/png" sizes="16x16" href="https://nzbfinder.ws/assets/nzbfinder-theme/images/appicons/favicon-16x16.png"
+        <link rel="manifest" href="https://nzbfinder.ws/assets/nzbfinder-theme/images/appicons/site.webmanifest"
+        <link rel="mask-icon" href="https://nzbfinder.ws/assets/nzbfinder-theme/images/appicons/safari-pinned-tab.svg" color="#5bbad5"
+        <meta name="msapplication-TileColor" content="#2d89ef">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>NZB Finder | Usenet on steroids!</title>
+        <link media="all" type="text/css" rel="stylesheet" href="https://nzbfinder.ws/assets/nzbfinder-theme/plugins/bootstrap/css/bootstrap.min.css">
+        <link media="all" type="text/css" rel="stylesheet" href="https://nzbfinder.ws/assets/nzbfinder-theme/css/style.min.css">
+        <link media="all" type="text/css" rel="stylesheet" href="https://nzbfinder.ws/assets/nzbfinder-theme/css/theme.min.css">
+        <link media="all" type="text/css" rel="stylesheet" href="https://nzbfinder.ws/assets/nzbfinder-theme/css/custom.min.css">
+        <link media="all" type="text/css" rel="stylesheet" href="https://nzbfinder.ws/assets/nzbfinder-theme/plugins/select2/select2.min.css">
+        <link media="all" type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700">
+        <link media="all" type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900">
+        <link media="all" type="text/css" rel="stylesheet" href="https://nzbfinder.ws/assets/nzbfinder-theme/css/icons/font-awesome/css/all.min.css">
+        <link media="all" type="text/css" rel="stylesheet" href="https://nzbfinder.ws/assets/nzbfinder-theme/css/icons/line-icons/line-icons.css">
+        <script src="https://nzbfinder.ws/assets/nzbfinder-theme/plugins/jquery/jquery-3.4.1.min.js"></script>
+    </head>
+
+    <body class="fixed-topbar color-default theme-sltd fixed-sidebar bg-light-default boxed">
+        <section>
+            <!-- BEGIN TOPBAR -->
+            <div class="topbar">
+    <a  id="logo" class="hide-sm" href="https://nzbfinder.ws"><img src="https://nzbfinder.ws/assets/nzbfinder-theme/images/logo/logo-white.png" style="display: block; float: left; padding: 10px;"></a>
+    <div class="header-left" style="display: block;">
+        <div class="topnav">
+            <a class="menutoggle" href="#" data-toggle="sidebar-collapsed" title="Collapse/Expand Sidebar"><span class="menu__handle"><span>Menu</span></span></a>
+            <ul class="nav nav-horizontal">
+                                                                                                                                                                                <li class="nav-parent">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30">
+                        <i class="fas fa-film"></i><span class="hide-sm">Movies</span><span class="hide-xs"><i class="fal fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://nzbfinder.ws/Movies">Movies</a></li>
+                                                <hr>
+                        <li><a href="https://nzbfinder.ws/popular/movies">Popular Movies</a></li>
+                        <li><a href="https://nzbfinder.ws/mymovies">My Movies</a></li>
+                        <hr>
+                                                                        <li><a href="https://nzbfinder.ws/Movies/Foreign">Foreign</a></li>
+                                                <li><a href="https://nzbfinder.ws/Movies/SD">SD</a></li>
+                                                <li><a href="https://nzbfinder.ws/Movies/HD">HD</a></li>
+                                                <li><a href="https://nzbfinder.ws/Movies/UHD">UHD</a></li>
+                                                <li><a href="https://nzbfinder.ws/Movies/3D">3D</a></li>
+                                                <li><a href="https://nzbfinder.ws/Movies/BluRay">BluRay</a></li>
+                                                <li><a href="https://nzbfinder.ws/Movies/DVD">DVD</a></li>
+                                                <li><a href="https://nzbfinder.ws/Movies/WEBDL">WEBDL</a></li>
+                                                <li><a href="https://nzbfinder.ws/Movies/X265">X265</a></li>
+                                                <li><a href="https://nzbfinder.ws/Movies/Other">Other</a></li>
+                                                                    </ul>
+                </li>
+                                                                                                                                                                <li class="nav-parent">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30">
+                        <i class="fas fa-music"></i><span class="hide-sm">Audio</span><span class="hide-xs"><i class="fal fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://nzbfinder.ws/browse/Audio">Audio</a></li>
+                        <hr>
+                                                <li><a href="https://nzbfinder.ws/browse/Audio/MP3">MP3</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/Audio/Video">Video</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/Audio/Audiobook">Audiobook</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/Audio/Lossless">Lossless</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/Audio/Foreign">Foreign</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/Audio/Other">Other</a></li>
+                                            </ul>
+                </li>
+                                                                                                <li class="nav-parent">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30">
+                        <i class="fas fa-desktop"></i><span class="hide-sm">TV</span><span class="hide-xs"><i class="fal fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://nzbfinder.ws/browse/TV">TV</a></li>
+                        <hr>
+                        <li><a href="https://nzbfinder.ws/popular/tv">Popular TV</a></li>
+                        <li><a href="https://nzbfinder.ws/series">TV Series</a></li>
+                        <li><a href="https://nzbfinder.ws/myshows">My Shows</a></li>
+                        <hr>
+                                                <li><a href="https://nzbfinder.ws/browse/TV/WEB-DL">WEB-DL</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/TV/Foreign">Foreign</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/TV/SD">SD</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/TV/HD">HD</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/TV/UHD">UHD</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/TV/Sport">Sport</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/TV/Anime">Anime</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/TV/Documentary">Documentary</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/TV/X265">X265</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/TV/Other">Other</a></li>
+                                            </ul>
+                </li>
+                                                                                                                                                                                                                <li class="nav-parent">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30">
+                        <i class="fas fa-ban"></i><span class="hide-sm">Adult</span><span class="hide-xs"><i class="fal fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://nzbfinder.ws/XXX">XXX</a></li>
+                                                <hr>
+                        <li><a href="https://nzbfinder.ws/popular/xxx">Popular XXX</a></li>
+                        <hr>
+                                                                                                <li><a href="https://nzbfinder.ws/browse/XXX/DVD">DVD</a></li>
+                                                                        <li><a href="https://nzbfinder.ws/browse/XXX/WMV">WMV</a></li>
+                                                                        <li><a href="https://nzbfinder.ws/browse/XXX/XviD">XviD</a></li>
+                                                                        <li><a href="https://nzbfinder.ws/browse/XXX/x264">x264</a></li>
+                                                                        <li><a href="https://nzbfinder.ws/browse/XXX/HD Clips">HD Clips</a></li>
+                                                                        <li><a href="https://nzbfinder.ws/browse/XXX/SD Clips">SD Clips</a></li>
+                                                                        <li><a href="https://nzbfinder.ws/browse/XXX/UHD">UHD</a></li>
+                                                                        <li><a href="https://nzbfinder.ws/browse/XXX/Imageset">Imageset</a></li>
+                                                                        <li><a href="https://nzbfinder.ws/browse/XXX/Packs">Packs</a></li>
+                                                                        <li><a href="https://nzbfinder.ws/browse/XXX/SD">SD</a></li>
+                                                                        <li><a href="https://nzbfinder.ws/browse/XXX/WEBDL">WEBDL</a></li>
+                                                                        <li><a href="https://nzbfinder.ws/browse/XXX/Other">Other</a></li>
+                                                                    </ul>
+                </li>
+                                                                                                                                                <li class="nav-parent">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30">
+                        <i class="fas fa-book"></i><span class="hide-sm">Books</span><span class="hide-xs"><i class="fal fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">                      
+                        <li><a href="https://nzbfinder.ws/browse/Books">Books</a></li>
+                        <hr>
+                                                <li><a href="https://nzbfinder.ws/browse/Books/Magazines">Magazines</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/Books/Ebook">Ebook</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/Books/Comics">Comics</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/Books/Technical">Technical</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/Books/Foreign">Foreign</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/Books/Other">Other</a></li>
+                                            </ul>
+                </li>
+                                                                                                <li class="nav-parent">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30">
+                        <i class="fas fa-bolt"></i><span class="hide-sm">Misc</span><span class="hide-xs"><i class="fal fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://nzbfinder.ws/browse/Other">Other</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/Other/Misc">Misc</a></li>
+                                                <li><a href="https://nzbfinder.ws/browse/Other/Hashed">Hashed</a></li>
+                                                <hr>
+                        <li><a href="/browse/All">All</a></li>
+                        <li><a href="/browsegroup">Browse Groups</a></li>
+                    </ul>
+                </li>
+                                                                                                                                                                                                                <!-- End If logged in -->
+                            </ul>
+        </div>
+    </div>
+
+            <!-- BEGIN HEADER RIGHT -->
+            <div class="header-right">
+                <ul class="header-menu nav navbar-nav">
+                    <!-- BEGIN USER DROPDOWN -->
+                    <li class="dropdown" id="user-header">
+                        <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <img src="https://nzbfinder.ws/assets/nzbfinder-theme/images/avatars/avatar12@2x.png" alt="user image">
+                            <span class="hide-xs"><span class="username">Hi, BentoAdmin</span></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="https://nzbfinder.ws/profile"><i class="far fa-user"></i><span>My Profile</span></a>
+                            </li>
+                            <li>
+                                <a href="https://nzbfinder.ws/cart/index"><i class="fas fa-shopping-cart"></i><span>My Cart</span></a>
+                            </li>
+                            <li>
+                                <a href="https://nzbfinder.ws/profileedit"><i class="far fa-cogs"></i><span>Account Settings</span></a>
+                            </li>
+                            <li>
+                                <a href="https://nzbfinder.ws/logout"><i class="fal fa-sign-out-alt"></i><span>Logout</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END USER DROPDOWN -->
+                </ul>
+            </div>
+            <!-- END HEADER RIGHT -->
+            </div>
+            <!-- END TOPBAR -->
+            <!-- BEGIN SidEBAR -->
+            <div class="sidebar scroll-on-height">
+                <div class="sidebar-inner">
+                    <div class="sidebar-top">
+                        <div style="margin:5px;">
+                            <form method="GET" action="https://nzbfinder.ws/search" accept-charset="UTF-8" id="headsearch_form">
+                            <input id="headsearch" name="search" value="Search..." class="form-control" type="text" tabindex="1$" />
+                            <div class="row no-gutter" style="padding-top:3px;">
+                                <div class="col-md-8">
+                                    <select id="headcat" name="t" class="form-control select2-render" data-search="true" style="height:35px;">
+                                        <option class="grouping" value="-1">All</option>
+                                                                                <option  value="1"> [Other]</option>
+                                                                                <option  value="10">&nbsp;&nbsp;&nbsp; > Misc</option>
+                                                                                <option  value="20">&nbsp;&nbsp;&nbsp; > Hashed</option>
+                                                                                                                        <option  value="2000"> [Movies]</option>
+                                                                                <option  value="2010">&nbsp;&nbsp;&nbsp; > Foreign</option>
+                                                                                <option  value="2030">&nbsp;&nbsp;&nbsp; > SD</option>
+                                                                                <option  value="2040">&nbsp;&nbsp;&nbsp; > HD</option>
+                                                                                <option  value="2045">&nbsp;&nbsp;&nbsp; > UHD</option>
+                                                                                <option  value="2050">&nbsp;&nbsp;&nbsp; > 3D</option>
+                                                                                <option  value="2060">&nbsp;&nbsp;&nbsp; > BluRay</option>
+                                                                                <option  value="2070">&nbsp;&nbsp;&nbsp; > DVD</option>
+                                                                                <option  value="2080">&nbsp;&nbsp;&nbsp; > WEBDL</option>
+                                                                                <option  value="2090">&nbsp;&nbsp;&nbsp; > X265</option>
+                                                                                <option  value="2999">&nbsp;&nbsp;&nbsp; > Other</option>
+                                                                                                                        <option  value="3000"> [Audio]</option>
+                                                                                <option  value="3010">&nbsp;&nbsp;&nbsp; > MP3</option>
+                                                                                <option  value="3020">&nbsp;&nbsp;&nbsp; > Video</option>
+                                                                                <option  value="3030">&nbsp;&nbsp;&nbsp; > Audiobook</option>
+                                                                                <option  value="3040">&nbsp;&nbsp;&nbsp; > Lossless</option>
+                                                                                <option  value="3060">&nbsp;&nbsp;&nbsp; > Foreign</option>
+                                                                                <option  value="3999">&nbsp;&nbsp;&nbsp; > Other</option>
+                                                                                                                        <option  value="5000"> [TV]</option>
+                                                                                <option  value="5010">&nbsp;&nbsp;&nbsp; > WEB-DL</option>
+                                                                                <option  value="5020">&nbsp;&nbsp;&nbsp; > Foreign</option>
+                                                                                <option  value="5030">&nbsp;&nbsp;&nbsp; > SD</option>
+                                                                                <option  value="5040">&nbsp;&nbsp;&nbsp; > HD</option>
+                                                                                <option  value="5045">&nbsp;&nbsp;&nbsp; > UHD</option>
+                                                                                <option  value="5060">&nbsp;&nbsp;&nbsp; > Sport</option>
+                                                                                <option  value="5070">&nbsp;&nbsp;&nbsp; > Anime</option>
+                                                                                <option  value="5080">&nbsp;&nbsp;&nbsp; > Documentary</option>
+                                                                                <option  value="5090">&nbsp;&nbsp;&nbsp; > X265</option>
+                                                                                <option  value="5999">&nbsp;&nbsp;&nbsp; > Other</option>
+                                                                                                                        <option  value="6000"> [XXX]</option>
+                                                                                <option  value="6010">&nbsp;&nbsp;&nbsp; > DVD</option>
+                                                                                <option  value="6020">&nbsp;&nbsp;&nbsp; > WMV</option>
+                                                                                <option  value="6030">&nbsp;&nbsp;&nbsp; > XviD</option>
+                                                                                <option  value="6040">&nbsp;&nbsp;&nbsp; > x264</option>
+                                                                                <option  value="6041">&nbsp;&nbsp;&nbsp; > HD Clips</option>
+                                                                                <option  value="6042">&nbsp;&nbsp;&nbsp; > SD Clips</option>
+                                                                                <option  value="6045">&nbsp;&nbsp;&nbsp; > UHD</option>
+                                                                                <option  value="6060">&nbsp;&nbsp;&nbsp; > Imageset</option>
+                                                                                <option  value="6070">&nbsp;&nbsp;&nbsp; > Packs</option>
+                                                                                <option  value="6080">&nbsp;&nbsp;&nbsp; > SD</option>
+                                                                                <option  value="6090">&nbsp;&nbsp;&nbsp; > WEBDL</option>
+                                                                                <option  value="6999">&nbsp;&nbsp;&nbsp; > Other</option>
+                                                                                                                        <option  value="7000"> [Books]</option>
+                                                                                <option  value="7010">&nbsp;&nbsp;&nbsp; > Magazines</option>
+                                                                                <option  value="7020">&nbsp;&nbsp;&nbsp; > Ebook</option>
+                                                                                <option  value="7030">&nbsp;&nbsp;&nbsp; > Comics</option>
+                                                                                <option  value="7040">&nbsp;&nbsp;&nbsp; > Technical</option>
+                                                                                <option  value="7060">&nbsp;&nbsp;&nbsp; > Foreign</option>
+                                                                                <option  value="7999">&nbsp;&nbsp;&nbsp; > Other</option>
+                                                                                                                    </select>
+                                </div>
+                                <div class="col-md-3 no-gutter">
+                                    <input id="headsearch_go" type="submit" class="btn btn-dark" style="margin-top:0px; margin-left:4px;" value="Go" />
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                        <div class="userlogged clearfix">
+                            <i class="icon icons-faces-users-01"></i>
+                            <div class="user-details">
+                                <h4>BentoAdmin</h4>
+                                <div class="user-login">
+                                    <button class="btn btn-xs btn-rounded" type="button">
+                                        <i class="online"></i><span>Admin</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-title">
+                        <span>Navigation</span>
+                    </div>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="https://nzbfinder.ws"><i class="fad fa-home"></i><span>Home</span> <span class="fa arrow"></span></a></li>
+                        <li><a href="https://nzbfinder.ws/search?search_type=adv"><i class="fas fa-search"></i><span>Advanced Search</span> <span class="fa arrow"></span></a></li>
+                        <li><a href="https://nzbfinder.ws/popular"><i class="far fa-fire-alt"></i><span>Popular Downloads</span> <span class="fa arrow"></span></a></li>
+                        <li><a href="https://nzbfinder.ws/premium"><i class="fas fa-gift"></i><span>Premium Service</span> <span class="fa arrow"></span></a></li>
+                        <li><a href="https://spotweb.nzbfinder.ws/" target="_blank"><i class="far fa-globe"></i><span>Spotweb</span> <span class="fa arrow"></span></a></li>
+                                                <li><a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=26135&url_id=902" target="_blank"><i class="far fa-user-shield"></i><span>Anonymous VPN</span> <span class="fa arrow"></span></a></li>
+                        <li><a href="https://nzbfinder.ws/browsegroup"><i class="fas fa-list"></i><span>Browse Groups</span> <span class="fa arrow"></span></a></li>
+                        <li><a href="https://nzbfinder.ws/cart/index"><i class="fas fa-shopping-cart"></i><span>Cart</span> <span class="fa arrow"></span></a></li>
+                        <li><a href="https://nzbfinder.ws/contact-us"><i class="far fa-envelope"></i><span>Contact</span> <span class="fa arrow"></span></a></li>
+                                                <li><a href="https://nzbfinder.ws/admin/reports"><i class="fas fa-flag"></i><span>Reports</span> <span class="fa arrow"></span></a></li>
+                        <li><a href="https://nzbfinder.ws/admin/index"><i class="fas fa-cogs"></i><span>Admin</span> <span class="fa arrow"></span></a></li>
+                                            </ul>
+                    <div class="sidebar-widgets">
+                        <p class="menu-title widget-title">Articles & Links</p>
+                        <ul class="folders">
+                            <li>
+                                <a href="https://nzbfinder.ws/apihelp"><i class="fas fa-cloud"></i>API</a>
+                            </li>
+                            <li>
+                                <a href="https://nzbfinder.ws/rsshelp"><i class="fas fa-rss"></i>RSS Feeds</a>
+                            </li>
+                            <li>
+                                <a href="https://nzbfinder.ws/software-setup"><i class="far fa-compact-disc"></i>Software Configuration</a>
+                            </li>
+                            <li>
+                                <a href="https://nzbfinder.ws/faq"><i class="fas fa-question-circle"></i>FAQ</a>
+                            </li>
+                            <li>
+                                <a href="https://nzbfinder.ws/terms"><i class="fad fa-landmark"></i>Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- END SIDEBAR -->
+            <div class="main-content">
+                <!-- BEGIN PAGE CONTENT -->
+                <div class="page-content">
+<div class="header">
+	<h2>NZBFinder.ws > <strong>Home</strong></h2>
+	
+	<div class="breadcrumb-wrapper">
+		<ol class="breadcrumb">
+		<li><a href="https://nzbfinder.ws/">Home</a></li>
+		</ol>
+	</div>
+
+</div> 
+<div class="col-xlg-12 portlets ui-sortable">
+<!--
+	<div class="panel panel-success" style="margin-bottom: 10px;">
+		<div class="panel-heading">LATEST NEWS</div>
+		<div class="panel-body">
+            <strong>January 2021: </strong>The whole .ws DNS system seems to be down and was having issues over the past weeks. To mitigate this we have
+            added a second domain name: https://nzbfinder.xyz which you can use in the mean time.
+		</div>
+    </div>
+-->
+</div>
+<div class="row plans pricing-table plan-rounded plan-separated num-plan-4 full-color">
+	<div class="col-sm-12">
+		<div class="plans clearfix">
+			<div class="plan" style="position: relative; opacity: 1; z-index: 0;">
+				<div class="plan-header bg-dark">
+					<div class="title"><span class="">free</span></div>
+					<div class="price"><span class="amount">0</span><span class="">€/year</span></div>
+				</div>
+				<div class="description">
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon far fa-rocket"></i>25 API hits</p>
+					</div>
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon fad fa-download"></i><b>5</b> downloads</p>
+					</div>
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon far fa-exclamation-triangle"></i>No Spotweb</p>
+					</div>
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon far fa-exclamation-triangle"></i>No XXX</p>
+					</div>
+				</div>
+			</div>
+			<div class="plan">
+				<div class="plan-header bg-dark">
+					<div class="title"><span class="">Basic</span></div>
+					<div class="price"><span class="amount">10</span><span class="">€/year</span></div>
+				</div>
+				<div class="description">
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon far fa-rocket"></i>5k API hits</p>
+					</div>
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon fad fa-download"></i><b>Infinite </b> dls</p>
+						<div class="p-item">
+							<p class="plan-item"><i class="plan-icon far fa-exclamation-triangle"></i><b>No Spotweb</b></p>
+						</div>
+					</div>
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon far fa-check-square"></i>4K XXX</p>
+					</div>
+					<div class="text-center plan-bottom-btn p-b-10"><a class="btn btn-blue" href="/premium">Buy now</a></div>
+				</div>
+			</div>
+			<div class="plan">
+				<div class="plan-header bg-primary">
+					<div class="title"><span class="">Pro</span></div>
+					<div class="price"><span class="amount">20</span><span class="">€/year</span></div>
+				</div>
+				<div class="description">
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon far fa-rocket"></i>20k API hits</p>
+					</div>
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon fad fa-download"></i><b> Infinite</b> dls</p>
+					</div>
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon far fa-exclamation-triangle"></i><b>No Spotweb</b></p>
+					</div>
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon far fa-check-square"></i>4K XXX</p>
+					</div>
+					<div class="text-center plan-bottom-btn p-b-10"><a class="btn btn-blue" href="/premium">Buy now</a></div>
+				</div>
+			</div>
+			<div class="plan">
+				<div class="plan-header bg-dark">
+					<div class="title"><span class="">Elite</span></div>
+					<div class="price"><span class="amount">35</span><span class="">€/year</span></div>
+				</div>
+				<div class="description">
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon far fa-rocket"></i>Unl. API hits</p>
+					</div>
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon fad fa-download"></i><b> Infinite</b> dls</p>
+					</div>
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon far fa-check-square"></i><b>Spotweb</b></p>
+					</div>
+					<div class="p-item">
+						<p class="plan-item"><i class="plan-icon far fa-check-square"></i>4K XXX</p>
+					</div>
+					<div class="text-center plan-bottom-btn p-b-10"><a class="btn btn-blue" href="/premium">Buy now</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col-xlg-12 portlets ui-sortable">
+	<div class="panel panel-danger" style="margin-bottom: 10px;">
+		<div class="panel-heading">Downloaded gibberish looking files?</div>
+		<div class="panel-body">
+			Please update to the latest versions of either NZBGet, SABnzbd, NZB Vortex or the latest (BETA) version of Newsbin Pro. As of late 2018 Newsleecher, SuperNZB and Grabit (and probably others) don't support the latest obfuscation methods.
+			Please ask the developers of these programs to update their software to support the latest NZB's.
+            If these apps do support the latest obfuscated NZB's then <a href="/contact-us">please let us know!</a>
+		</div>
+	</div>
+</div>
+* API and download counters reset 24h after each request
+<br/><br/>
+<a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=26135&url_id=902" title="NordVPN" target="_blank"><img src="assets/nzbfinder-theme/images/nordvpn2.jpeg"></a>
+
+                    <div class="footer">
+                        <div class="copyright">
+                            <p class="pull-left sm-pull-reset"> <span>Copyright <span class="copyright">©</span> 2021</span> <span>NZB Finder</span>. <span>All rights reserved.</span> </p>
+                            <p class="pull-right sm-pull-reset">
+                                <span>
+                                    <a href="https://nzbfinder.ws/contact-us" class="m-r-10">Support</a> | <a class="m-l-10 m-r-10" href="https://nzbfinder.ws/terms">Terms of use</a>
+                                                                    </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PAGE CONTENT -->
+            </div>
+            <!-- END MAIN CONTENT -->
+        </section>
+        <a href="#" class="scrollup"><i class="fas fa-angle-up"></i></a>
+        <script defer src="https://nzbfinder.ws/assets/nzbfinder-theme/plugins/select2/select2.min.js"></script>         <script defer src="https://nzbfinder.ws/assets/nzbfinder-theme/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script defer src="https://nzbfinder.ws/assets/nzbfinder-theme/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>         <script defer src="https://nzbfinder.ws/assets/nzbfinder-theme/plugins/noty/jquery.noty.packaged.min.js"></script>         <script defer src="https://nzbfinder.ws/assets/nzbfinder-theme/js/nzbfinder.min.js"></script>
+        
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-37069298-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+        
+        <!-- END PAGE SCRIPTS -->
+<div class="modal fade modal-image" id="modal-image" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="far fa-window-close"></i></button>
+			</div>
+			<div class="modal-body">
+																															</div>
+		</div>
+	</div>
+</div>
+    </body>
+</html>
