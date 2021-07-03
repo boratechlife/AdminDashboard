@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="tailwind.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <link
+      href="https://unpkg.com/mobius1-selectr@latest/dist/selectr.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://unpkg.com/mobius1-selectr@latest/dist/selectr.min.js"
+      type="text/javascript"
+    ></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/gh/mobius1/selectr@latest/dist/selectr.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/gh/mobius1/selectr@latest/dist/selectr.min.js"
+      type="text/javascript"
+    ></script>
+  </head>
+
+  <body class="max-h-screen account2" data-page="login">
+    <div
+      class="container px-3 md:h-full md:mx-auto md:relative md:w-[670px]"
+      id="login-block"
+      style="margin-top: 50px"
+    >
+      <div
+        class="
+          account-info
+          bg-[#319db5]
+          md:text-white md:table-cell md:p-6 md:text-left md:w-[43%]
+        "
+      >
+        <a href="/" class="mb-3 logo">
+          <img src="./images/logo-white.png" />
+        </a>
+        <h3 class="text-[17px] mt-2 font-serif">Usenet indexer &amp; API</h3>
+        <ul class="p-0 mt-6 mb-20 space-y-3 text-sm">
+          <li><i class="fas fa-lock"></i> 100% SSL Secured</li>
+          <li><i class="fas fa-fighter-jet"></i> Extremely fast!</li>
+          <li><i class="fas fa-database"></i> 12+ year history</li>
+          <li><i class="fas fa-retweet"></i> Indexing 24/7/365</li>
+          <li><i class="fas fa-tachometer"></i> High level of deobfuscation</li>
+          <li><i class="fas fa-server"></i> XML &amp; JSON API</li>
+          <li>
+            <strong><small>Compatible with:</small></strong>
+          </li>
+          <li><i class="fas fa-check-square"></i> Sonarr, Radarr, Lidarr</li>
+          <li><i class="fas fa-check-square"></i> NZBHydra 2</li>
+          <li>
+            <i class="fas fa-check-square"></i> Sickrage, SickGear, Sickbeard
+          </li>
+          <li><i class="fas fa-check-square"></i> Couchpotato</li>
+          <li><i class="fas fa-check-square"></i> Headphones</li>
+          <li><i class="fas fa-check-square"></i> Mylar &amp; LazyLibrarian</li>
+          <li><i class="fas fa-check-square"></i> 100% Newznab Compatible</li>
+        </ul>
+      </div>
+      <div
+        class="
+          md:table-cell md:align-top md:w-[57%]
+          relative
+          p-6
+          bg-white
+          pb-5
+          overflow-hidden
+          account-form
+        "
+      >
+        <form
+          method="POST"
+          action="https://nzbfinder.ws/login"
+          accept-charset="UTF-8"
+          class="form-signin"
+        >
+          <input
+            name="_token"
+            type="hidden"
+            value="FGFNjjMc24ZVEHzPmPF3RS89ZFeJIuoAoSvPC8aD"
+          />
+          <h3 class="text-center uppercase mb-5 text-[15px] font-thin">
+            <strong>Sign in</strong> to your account
+          </h3>
+          <div class="relative mb-3 text-left form-group append-icon">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              class="
+                w-full
+                pr-[36px]
+                inline-block
+                rounded
+                px-3
+                py-2
+                align-middle
+                bg-white
+                border border-[#ecedee]
+                text-[#555]
+                form-white
+                username
+              "
+              placeholder="Username"
+              autofocus=""
+              required=""
+            />
+          </div>
+          <div class="form-group append-icon">
+            <input
+              type="password"
+              name="password"
+              class="
+                w-full
+                pr-[36px]
+                inline-block
+                rounded
+                px-3
+                py-2
+                align-middle
+                bg-white
+                border border-[#ecedee]
+                text-[#555]
+                form-white
+                username
+                password
+              "
+              placeholder="Password"
+              required=""
+            />
+          </div>
+          <div class="flex items-center mt-4 space-x-2 checkbox">
+            <input
+              id="rememberme"
+              name="rememberme"
+              type="checkbox"
+              class="relative block w-5 h-5 pl-5 mt-0 mb-4"
+              checked="checked"
+            />
+            <label class="mb-4" for="rememberme"> Remember me </label>
+          </div>
+          <div class="relative flex flex-col align-middle">
+            <button
+              class="mr-5 h-[35px] border border-[#d3d7db] btn-transparent"
+            >
+              Sign In
+            </button>
+            <a
+              class="
+                mr-5
+                h-[35px]
+                border border-[#d3d7db]
+                btn-transparent
+                text-center text-black
+              "
+              href="/forgottenpassword"
+              >Forgot password</a
+            >
+            <a
+              class="
+                mr-5
+                h-[35px]
+                border border-[#d3d7db]
+                btn-transparent
+                text-center text-black
+              "
+              href="/resendactivation"
+              >Re-send activation e-mail</a
+            >
+            <a
+              class="
+                mr-5
+                h-[35px]
+                border border-[#d3d7db]
+                btn-transparent
+                text-center text-black
+              "
+              href="/register"
+              >Register account</a
+            >
+          </div>
+          <div
+            class="
+              form-footer
+              bg-[#f4f4f4]
+              border border-[#ddd]
+              mt-[50%]
+              -mr-5
+              -mb-8
+              -ml-6
+              p-4
+            "
+          >
+            <div class="clearfix">
+              <p>
+                Abuse &amp; DMCA Contact:
+
+                <script type="text/javascript">
+                  eval(
+                    unescape(
+                      "%62%76%7a%77%6a%30%34%3d%5b%27%25%36%31%25%36%32%25%37%35%25%37%33%25%36%35%27%2c%5b%27%25%37%37%25%37%33%27%2c%27%25%36%65%25%37%61%25%36%32%25%36%36%25%36%39%25%36%65%25%36%34%25%36%35%25%37%32%27%5d%2e%72%65%76%65%72%73%65%28%29%2e%6a%6f%69%6e%28%27%2e%27%29%5d%2e%6a%6f%69%6e%28%27%40%27%29%3b%7a%6f%72%74%75%39%38%3d%75%6e%65%73%63%61%70%65%28%62%76%7a%77%6a%30%34%29%3b%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%7a%6f%72%74%75%39%38%2e%6c%69%6e%6b%28%27%6d%61%69%27%2b%27%6c%74%6f%3a%27%2b%62%76%7a%77%6a%30%34%29%29%3b"
+                    )
+                  )
+                </script>
+                <a
+                  href="mailto:%61%62%75%73%65@%6e%7a%62%66%69%6e%64%65%72.%77%73"
+                  >abuse@nzbfinder.ws</a
+                >
+              </p>
+            </div>
+            <div class="clearfix">
+              <p>
+                <a href="https://usenetreviewz.com/nzbfinder-review/"
+                  >UsenetReviewz</a
+                >
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://nzbfinder.ws/assets/nzbfinder-theme/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      if ($("body").data("page") == "login") {
+        /* Show / Hide Password Recover Form */
+        $("#password").on("click", function (e) {
+          e.preventDefault()
+          $(".form-signin").slideUp(300, function () {
+            $(".form-password").slideDown(300)
+          })
+        })
+        $("#login").on("click", function (e) {
+          e.preventDefault()
+          $(".form-password").slideUp(300, function () {
+            $(".form-signin").slideDown(300)
+          })
+        })
+      }
+    </script>
+  </body>
+</html>

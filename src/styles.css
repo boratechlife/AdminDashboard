@@ -22,4 +22,52 @@
   @apply bg-gray-800  !important;
   @apply text-gray-200  !important;
 }
+
+.account2 {
+  background: #1f3649;
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    #1f3649 0,
+    #17253d 44%,
+    #040d11 100%
+  );
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0,
+    center center,
+    100%,
+    color-stop(0, #1f3649),
+    color-stop(44%, #17253d),
+    color-stop(100%, #040d11)
+  );
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    #1f3649 0,
+    #17253d 44%,
+    #040d11 100%
+  );
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    #1f3649 0,
+    #17253d 44%,
+    #040d11 100%
+  );
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    #1f3649 0,
+    #17253d 44%,
+    #040d11 100%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    #1f3649 0,
+    #17253d 44%,
+    #040d11 100%
+  );
+}
 @tailwind utilities;
